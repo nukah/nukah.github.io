@@ -1,7 +1,7 @@
 baseURL: https://x686.pro/
 languageCode: en-us
 title: private.space
-theme: archie
+theme: terminal
 
 pygmentsstyle: "solarized-dark"
 pygmentscodefences: true
@@ -9,23 +9,28 @@ pygmentscodefencesguesssyntax: true
 
 menu:
   main:
-    - name: "root"
-      url: "/"
-      weight: 1
     - name: "thoughts"
       url: "/thoughts"
+      weight: 1
+    - name: "links"
+      url: "/links"
       weight: 2
     - name: "me"
       url: "/me"
       weight: 3
 
 params:
-  mode: light
-  mathjax: true
+  themeColor: purple
+  showMenuItems: 5
+  showLanguageSelector: false
+  fullWidthTheme: false
+  centerTheme: true
+  showLastUpdated: true
+  readingTime: true
   social:
     - name: "Github"
       icon: "github"
       url: "https://github.com/nukah"
-    - name: "LinkedIn"
-      icon: "linkedin"
-      url: "https://linkedin.com/nukah"
+    - name: "Email"
+      icon: "email"
+      url: "mailto:me@nile.ninja"
