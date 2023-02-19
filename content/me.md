@@ -2,33 +2,40 @@
 title: "about me"
 date: 2023-02-13
 ---
-## General
-**current position**: `Engineering manager @ fintech`
+
+# General
+**current position**: *Engineering manager @ fintech*
 
 **age**: `37`
 
-## Short Summary
+# Short Summary
 
 My career started with quality assurance, then I moved on to automation, and finally I got into the actual design and implementation of systems.
 
-I've worked with a variety of technologies over the last 13 years, including Ruby, Python, and recently Go. I like its efficiency in distributed, performance-oriented systems. I consider myself well versed in architectural design and software development patterns and conventions. I consider myself a big fan of clean and understandable code.
+I've worked with a variety of technologies over the last 13 years, including Ruby, Python, and recently Go. I like its efficiency in distributed, performance-oriented systems. I consider myself well versed in **architectural design and software development patterns** and conventions. I consider myself a big fan of clean and understandable code.
 
-My expertise includes design and development of high performance `distributed back-end applications`, management of software teams, `mentoring` of junior developers and problem solving. Throughout my career I have successfully managed projects from conception to completion with great results.
+My expertise includes design and development of high performance **distributed back-end applications**, management of software teams, **mentoring** of junior developers and problem solving. Throughout my career I have successfully managed projects from conception to completion with great results.
 
-I also excel at `designing complex solutions`, optimising code for performance, troubleshooting systems and developing secure applications. I have excellent `communication skills` which enable me to work effectively with those involved at all levels of the organisation.
+I also excel at **designing complex solutions**, optimising code for performance, **troubleshooting systems** and developing secure applications. I have excellent **communication skills** which enable me to work effectively with those involved at all levels of the organisation.
 
-I have a `passion for technology` and a strong desire to keep abreast of the latest industry trends.
+I have a **passion for technology** and a strong desire to keep abreast of the latest industry trends.
 
-### Languages
+---
+
+## Languages
 
 - Russian - Native
 - English - Advanced.
 
-### Education
+---
+
+## Education
 
 1. MEPHI (Moscow Engineering Physics Institute), Natalia Nesterova Moscow Academy. Graduated in 2008 with a master's degree in "Industrial Control Systems" or ASUP as it's called here.
 
-### Technology stack
+---
+
+## Technology stack
 
 - Programming languages: `Go`, `Ruby`, `Elixir`, `Java`.
 - Data: `PostgreSQL`, `Redis`, `ElasticSearch`, `MongoDB`, `RDS`
@@ -36,9 +43,11 @@ I have a `passion for technology` and a strong desire to keep abreast of the lat
 - Data analysis/processing: `Apache Spark`, `Apache Hadoop`, `Apache Druid`
 - Data distribution: `RabbitMQ`, `Apache Kafka`, `Amazon SQS`
 
-### Experience
+---
 
-#### 2022 - now
+# Experience
+
+## 2022 - now
 
 **company:** Fairmoney ([fairmoney.io](https://fairmoney.io/))
 
@@ -59,7 +68,9 @@ Fairmoney is french based company creating financial products in emerging market
 7. Facilitation of the migration to the distributed approach in terms of systems and services.
 8. Analyse and work with my colleagues to improve the overall knowledge and skills of the team.
 
-#### 2021 - 2022
+---
+
+## 2021 - 2022
 
 **company:** Geekbrains ([geekbrains.ru](https://geekbrains.ru))
 
@@ -83,7 +94,9 @@ I worked on the following:
 3. Provide advice and guidance to clusters of neighbouring teams.
 4. Design of a next-generation SOA approach for an entire business grid.
 
-#### 2021 - 2022
+---
+
+## 2021 - 2022
 
 **company:** Miple ([miple.io](https://miple.io)) [now defunct]
 
@@ -103,7 +116,9 @@ Miple provides an essential set of tools for influencers and experts, helping th
 
 Miple is built using Kubernetes, PostgreSQL, Redis and Clickhouse on top of the Rails6 stack, making use of various external SaaS and custom-built solutions. With distributed functionality in mind, Miple is architected with separate domains and separate functional applications. These are organised in scalable pipelines.
 
-#### 2020 - 2021
+---
+
+## 2020 - 2021
 
 **company:** Joost ([joost.chat](https://joost.chat)) [now defunct]
 
@@ -123,7 +138,9 @@ Joost was started with a small team, having only 3 developers to start with. My 
 4. Media storage backbone using underlying S3-compatible system
 5. Distributed notification system allowing us to easily connect new notification protocols (such as APN/FCM push notifications, emails, messengers).
 
-#### 2017 - 2021
+---
+
+## 2017 - 2021
 
 **company:** Rocketbank ([rocketbank.ru](https://rocketbank.ru)) [now defunct]
 
@@ -145,9 +162,9 @@ Apart from that, there were a couple of minor applications written in ruby and e
 
 Since the start, I was a single backend developer at our projects but at the end of 2017 we started looking further into expanding the team, till the end of 2018 I was managing 2 more backend developers, then in 2019, I've moved further to overlook technically whole development team as well as managing new projects and creating teams for them.
 
+---
 
-
-#### 2016 - 2017
+## 2016 - 2017
 
 **company:** Sourcelab Technology
 
@@ -163,9 +180,9 @@ We were using SCRUM methodology there with usual pre-day quick meetings, sprint 
 
 Most of the new projects were based on rails4 stack using MySQL as data engine, with a couple of legacy rails2/rails3 projects that needed upgrading and refactoring.
 
+---
 
-
-#### 2015 - 2016
+## 2015 - 2016
 
 **company:** Social Quantum
 
@@ -179,9 +196,9 @@ The main project in Social Quantum was the development of an internal ERP system
 
 System stack consisted of well-written and maintained rails4 applications with a huge focus on specs and tests (both unit and integrational), rationalized and mature feature designs, frequent code reviews, and pair development PostgreSQL/Redis/Memcache was used as data storage. Bootstrap/Jquery/Native js/SCSS/template engines on the front part.
 
+---
 
-
-#### 2014 - 2015
+## 2014 - 2015
 
 **company:** Scade
 
@@ -191,9 +208,9 @@ System stack consisted of well-written and maintained rails4 applications with a
 
 Scade was a tinder-alike dating application that was born in the early 2010-s and lived through at least 2 rewrites before I was among the new team which took development. My task was to provide a new backend for rewritten front application(that was developed on Closure), aside from this I was responsible for creating a new communication service(written on go) liable for WebSocket connections with clients, which should've replaced the old NodeJS application that was experiencing load difficulties. The application was developed on top of the existing rails4 application with the grape as interface framework.
 
+---
 
-
-#### 2010 - 2014
+## 2010 - 2014
 
 **company:** Mediapress
 
@@ -203,7 +220,9 @@ Scade was a tinder-alike dating application that was born in the early 2010-s an
 
 I was the part of IT team which was responsible for internal tools and instruments. One of my main goals there was creating a ticket system for inventorial requests/tasks. That application was developed on top of Redmine, heavily customized, and extended. Apart from that, many minor projects and applications helped to ease the company's lifecycle. The application was mostly written in python and ruby, using rails and Django.
 
-## Hobbies
+---
+
+# Hobbies
 
 - My long-running interest is computer games, although for the last few years there is not much time for that
 - MTB
