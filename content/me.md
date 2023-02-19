@@ -50,14 +50,14 @@ Fairmoney is french based company creating financial products in emerging market
 
 **Technical**
 
-Developing and managing one of the product streams focused on accelerating client financial stability.
-1. Provisioning feedback to business divisions on delivery expectations regarding new initiatives.
-1. Managing full features deevelopment team which delivers values in product stream.
-2. Working with business development division to plan, design and retro-analyse the outcome of feature implementations.
-3. Analysis and design of technical domain of the team.
-4. Keeping high level of standards on SDLC, development practices, infrastructural state.
-5. Amplifying migration to the distributed approach in terms of systems and services.
-6. Analysing and working with my peers to improve overall knoweldge and skillset.
+1. Development and management of one of the product streams with a focus on accelerating client financial stability.
+2. Provide feedback to business units on delivery expectations in relation to new initiatives.
+3. Management of a full feature development team delivering value in the product stream.
+4. Plan, design and retro-analyse the outcome of feature implementations in conjunction with the Business Development department.
+5. Analysing and designing the technical domain of the team.
+6. Maintain high standards of SDLC, development practices and infrastructure.
+7. Facilitation of the migration to the distributed approach in terms of systems and services.
+8. Analyse and work with my colleagues to improve the overall knowledge and skills of the team.
 
 #### 2021 - 2022
 
@@ -71,14 +71,17 @@ Geekbrains is one of the top Russian educational platforms offering custom progr
 
 **Technical**
 
-8-years-old project with plenty of a legacy code and subsystems.
-My job was to provide guidance and execution for making application scalable and maintain low TTM.
-One of the major goals was to transform monolithic approach to a more agile distributed form utilising SOA-methodology.
-My duties and responsibilities:
-1. Management and recruitment for a small team of backend engineers.
-2. Management and planning for features and tasks within core application.
-3. Consulting and advising for neighbour team clusters.
-4. Designing next-gen SOA-approach for a whole business grid.
+8-year-old project with lots of legacy code and subsystems.
+
+My role was to provide guidance and execution for the scalability of the application and the maintenance of low TTM.
+
+Transforming the monolithic approach to a more agile distributed form using SOA methodology was one of the key objectives.
+
+I worked on the following:
+1. Management and recruitment of a small team of back-end engineers for the project.
+2. Manage the functions and tasks of the core application.
+3. Provide advice and guidance to clusters of neighbouring teams.
+4. Design of a next-generation SOA approach for an entire business grid.
 
 #### 2021 - 2022
 
@@ -88,18 +91,17 @@ My duties and responsibilities:
 
 **Summary**
 
-Miple provides a crucial toolset for influencers and experts helping them share their expertise and knowledge with a broad audience. Combining all the parts in one single place:
+Miple provides an essential set of tools for influencers and experts, helping them to share their expertise and knowledge with a wide range of audiences.
 
-- Payment acquisition and money transfers
-- Communication platform
-- Marketing integrations
-- Individual planning and notifications
+ All in one place:
+- Acquisition and transfer of payments
+- Communication hub
+- Integrations with marketing
+- Customised scheduling and alerting
 
 **Technical**
 
-Miple is created on the Rails6 stack utilizing various external SaaS and custom-built solutions using Kubernetes, PostgreSQL, Redis, Clickhouse. With distributed functionality in mind, Miple is architectured with separate domains and separate functional applications organizing in scalable pipelines.
-
-
+Miple is built using Kubernetes, PostgreSQL, Redis and Clickhouse on top of the Rails6 stack, making use of various external SaaS and custom-built solutions. With distributed functionality in mind, Miple is architected with separate domains and separate functional applications. These are organised in scalable pipelines.
 
 #### 2020 - 2021
 
@@ -109,19 +111,17 @@ Miple is created on the Rails6 stack utilizing various external SaaS and custom-
 
 **Summary**
 
-Joost is a communicational platform primarily oriented on e-commerce businesses, helping to achieve personal interaction with their customers in harsh times of pandemic when actual person-to-person engagement is hardly possible. In times when more and more people moving their shopping and purchases online - we bring customers and merchants together in a more conventional manner.
+Joost is a communication platform primarily for e-commerce businesses, helping them to interact with their customers in times of pandemic, when real face-to-face interaction is hard to come by. We bring customers and merchants together in a more conventional way at a time when more and more people are doing their shopping and buying online.
 
 **Technical**
 
-Joost was started with a small team of professionals having just 3 developers at hand at the start. My role was to build up all backend systems and infrastructure beneath them. A multitude of technologies was being used:
+Joost was started with a small team, having only 3 developers to start with. My role was to build all of the back-end systems and the infrastructure underneath them. The technologies in use have been a variety of things:
 
-- K8S for orchestrating and delivering applications
-- Clickhouse for analytics and reporting
-- Custom made WebRTC backbone
-- Media storage backbone utilizing S3-compatible system underneath.
-- Distributed notification system allowing us to connect new notification protocols (such as APN/FCM push notifications, emails, messengers) without a hassle
-
-
+1. K8S for the orchestration and deployment of applications
+2. Clickhouse for the analysis and reporting
+3. A bespoke WebRTC backbone
+4. Media storage backbone using underlying S3-compatible system
+5. Distributed notification system allowing us to easily connect new notification protocols (such as APN/FCM push notifications, emails, messengers).
 
 #### 2017 - 2021
 
