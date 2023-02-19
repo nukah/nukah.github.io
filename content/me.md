@@ -11,17 +11,13 @@ date: 2023-02-13
 
 I've been working in IT and software development in particular for the last 10 years, starting with QA, then moving to automation, and finally to actual software development.
 
-First few projects were mostly individual or small freelance applications, and after some time of research and getting into principles and methodologies I started working in the industrial field.
+I've been working with `Ruby/Rails` stack for the last 10 years. Lately, I've been using `Go` more because of its efficiency in distributed performance-oriented systems. I consider myself proficient in architecture design, software development patterns, and conventions. Considering myself a big fan of clean and comprehensible code.
 
-I've been working with Ruby/Rails stack for the last 10 years. Lately, I've been using `Go` more because of its efficiency in distributed performance-oriented systems.
+My expertise includes designing and developing high-load distributed backend applications, leading software teams, mentoring junior developers, and problem solving. Throughout my career, I have successfully managed projects from conception to completion with great results.
 
-I've been mostly working with backend systems developing infrastructure for distributed web systems(most of them interacting with different kinds of front applications).
+I specialize in software architecture, problem solving, team management and mentoring. My strengths also include designing complex algorithms, optimizing code for performance, troubleshooting system issues, and developing secure applications. In addition to this, I have excellent communication skills which enable me to effectively collaborate with stakeholders from all levels of the organization.
 
-I'm experienced with both native ruby application and rails stack, architecture design, software development patterns, and conventions. Considering myself a big fan of clean and comprehensible code.
-
-Recent projects, I am being part of, inspired me to utilize lean development philosophy, being able to quickly deliver and examine features, capable of understanding business motives and producing respective results.
-
-On the latest projects in addition to architecting and developing, I've been managing feature teams (<10 people), handling hiring, performance analysis, mentoring and day-to-day activities within product flow.
+I am passionate about technology and have a strong desire to stay up-to-date with the latest trends in the industry.
 
 ### Languages
 

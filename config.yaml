@@ -22,6 +22,7 @@ menu:
 params:
   contentTypeName: "thoughts"
   themeColor: purple
+  favicon: "favicon.ico"
   showMenuItems: 5
   showLanguageSelector: false
   fullWidthTheme: false
