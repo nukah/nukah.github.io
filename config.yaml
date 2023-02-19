@@ -34,5 +34,5 @@ params:
       icon: "github"
       url: "https://github.com/nukah"
     - name: "Email"
-      icon: "email"
+      icon: "at-sign"
       url: "mailto:me@x686.pro"

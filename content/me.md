@@ -3,15 +3,15 @@ title: "about me"
 date: 2023-02-13
 ---
 ## General
-**current position**: `engineering manager`
+**current position**: `Engineering manager @ fintech`
 
 **age**: `37`
 
 ## Short Summary
 
-I've been working in software development for the last 10 years, starting with QA, then moving on to automating and finally getting into actual system design and implementation.
+My career started with quality assurance, then I moved on to automation, and finally I got into the actual design and implementation of systems.
 
-I've been working with the `Ruby/Rails` stack for the past 10 years. Lately I've been using `Go` more. I like its efficiency in distributed, performance-oriented systems. I consider myself to be well versed in `architectural design` and software development patterns and conventions. I consider myself to be a big fan of clean and understandable code.
+I've worked with a variety of technologies over the last 13 years, including Ruby, Python, and recently Go. I like its efficiency in distributed, performance-oriented systems. I consider myself well versed in architectural design and software development patterns and conventions. I consider myself a big fan of clean and understandable code.
 
 My expertise includes design and development of high performance `distributed back-end applications`, management of software teams, `mentoring` of junior developers and problem solving. Throughout my career I have successfully managed projects from conception to completion with great results.
 
