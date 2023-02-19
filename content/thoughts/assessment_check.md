@@ -4,10 +4,20 @@ date: 2023-02-19T14:53:34+06:00
 tldr: Example of assessment story
 ---
 
-## Problem description
+## Brief
+
+Example of backend software developer assessement test that can be completed within few hours.
+
+It consists of few crucial points:
+- API Generation
+- Algorithmical work with geospatial data
+- Caching strategy
+
+<!--more-->
+
+## Description
 
 We have a database storing information about ATMs and their locations.
-
 Data structure is defined in the following format:
 
 | Name | ID | Latitude | Longitude |
