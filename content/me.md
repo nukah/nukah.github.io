@@ -61,7 +61,7 @@ Fairmoney is french based company creating financial products in emerging market
 
 #### 2021 - 2022
 
-**company:** Geekbrains ([geekbrains.ru](geekbrains.ru))
+**company:** Geekbrains ([geekbrains.ru](https://geekbrains.ru))
 
 **position**: Department Technical Lead
 
@@ -85,7 +85,7 @@ I worked on the following:
 
 #### 2021 - 2022
 
-**company:** Miple ([miple.io](miple.io))
+**company:** Miple ([miple.io](https://miple.io)) [now defunct]
 
 **position**: Co-Founder, CTO
 
@@ -105,7 +105,7 @@ Miple is built using Kubernetes, PostgreSQL, Redis and Clickhouse on top of the 
 
 #### 2020 - 2021
 
-**company:** Joost ([joost.chat](joost.chat))
+**company:** Joost ([joost.chat](https://joost.chat)) [now defunct]
 
 **position:** Co-Founder, CTO
 
@@ -125,7 +125,7 @@ Joost was started with a small team, having only 3 developers to start with. My 
 
 #### 2017 - 2021
 
-**company:** Rocketbank ([rocketbank.ru](rocketbank.ru))
+**company:** Rocketbank ([rocketbank.ru](https://rocketbank.ru)) [now defunct]
 
 **position:** Principle software developer
 
