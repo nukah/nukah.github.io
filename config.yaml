@@ -20,6 +20,7 @@ menu:
       weight: 3
 
 params:
+  contentTypeName: "thoughts"
   themeColor: purple
   showMenuItems: 5
   showLanguageSelector: false
