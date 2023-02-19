@@ -9,15 +9,15 @@ date: 2023-02-13
 
 ## Short Summary
 
-I've been working in IT and software development in particular for the last 10 years, starting with QA, then moving to automation, and finally to actual software development.
+I've been working in IT and Software Development in particular for the last 10 years, starting with QA, then moving on to automating and finally getting into actual software development.
 
-I've been working with `Ruby/Rails` stack for the last 10 years. Lately, I've been using `Go` more because of its efficiency in distributed performance-oriented systems. I consider myself proficient in architecture design, software development patterns, and conventions. Considering myself a big fan of clean and comprehensible code.
+I've been working with the Ruby/Rails stack for the past 10 years. Lately I've been using `Go` more. I like its efficiency in distributed, performance-oriented systems. I consider myself to be well versed in architectural design and software development patterns and conventions. I consider myself to be a big fan of clean and understandable code.
 
-My expertise includes designing and developing high-load distributed backend applications, leading software teams, mentoring junior developers, and problem solving. Throughout my career, I have successfully managed projects from conception to completion with great results.
+My expertise includes design and development of high performance distributed back-end applications, management of software teams, mentoring of junior developers and problem solving. Throughout my career I have successfully managed projects from conception to completion with great results.
 
-I specialize in software architecture, problem solving, team management and mentoring. My strengths also include designing complex algorithms, optimizing code for performance, troubleshooting system issues, and developing secure applications. In addition to this, I have excellent communication skills which enable me to effectively collaborate with stakeholders from all levels of the organization.
+I specialise in software architecture, problem solving, team management and mentoring. I also excel at designing complex solutions, optimising code for performance, troubleshooting systems and developing secure applications. I have excellent communication skills which enable me to work effectively with those involved at all levels of the organisation.
 
-I am passionate about technology and have a strong desire to stay up-to-date with the latest trends in the industry.
+I have a passion for technology and a strong desire to keep abreast of the latest industry trends.
 
 ### Languages
 
