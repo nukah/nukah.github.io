@@ -1,7 +1,6 @@
 ---
 title: "Database column type overflow case"
 date: 2023-03-05T13:14:32+06:00
-draft: true
 tags: ['interview', 'engineering', 'case']
 ---
 
