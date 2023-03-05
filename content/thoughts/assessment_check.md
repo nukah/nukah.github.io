@@ -2,6 +2,7 @@
 title: "Assessment check example"
 date: 2023-02-19T14:53:34+06:00
 tldr: Example of assessment story
+tags: ['interview', 'engineering']
 ---
 
 ## Brief
