@@ -16,3 +16,7 @@ date: 2023-02-13
 
 # books
 - [DDD in Go](https://www.amazon.com/Domain-Driven-Design-Golang-maintainable-business-ebook/dp/B0BNJ8KHYN/ref=tmm_kin_swatch_0)
+
+# toolkit
+- [Whimsical / diagrams and wireframing](https://whimsical.com/)
+- [Sequence diagrams](https://gleek.io)
