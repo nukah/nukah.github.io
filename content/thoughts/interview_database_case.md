@@ -12,9 +12,23 @@ This assignment covers working with databases, large volumes of data, naunces of
 <!--more-->
 
 ### Given
-A table in a relational database with a small number of columns but a large number of rows (more than 1 billion).
-This table is critical to business operations and is very actively used in the application.
-One of the columns is a sequential key of type int32 and in the near future (week, month), the number of rows will lead to a capacity overflow of type int32.
+We have a table which
+- Critical for business operations
+- Actively used in application
+- Has 3 columns
+| Name | Type | Attributes|
+| --- | --- | --- |
+| id | int | sequential |
+| name | text | |
+| data | text |
+- Current amount of rows is 2 billion
+- Each day we add about 10m rows to the table
 
-### The task
-What will be the strategy to solve this problem and what measures should be taken to minimise system downtime?
+### Questions
+- What potential outcome you see if done nothing?
+- What will be the strategy to solve this issue?
+- What measures should be taken to minimise system's downtime?
+
+### Links and references
+- [Integer at the end of the universe](https://www.crunchydata.com/blog/the-integer-at-the-end-of-the-universe-integer-overflow-in-postgres)
+- [SQL Data types](https://www.digitalocean.com/community/tutorials/sql-data-types)
