@@ -8,6 +8,7 @@ date: 2023-02-13
 - [Async vs Sync intraservice communication](https://mats3.io/background/rationale-for-mats/)
 - [System design interview](https://interviewing.io/guides/system-design-interview)
 - [Pitfalls to avoid while building event driven architecture](https://medium.com/wix-engineering/event-driven-architecture-5-pitfalls-to-avoid-b3ebf885bdb1)
+- [Alpine as free chaos engineering](https://martinheinz.dev/blog/92)
 - [Event driven architecture patterns 1](https://medium.com/wix-engineering/6-event-driven-architecture-patterns-part-1-93758b253f47)
 - [Event driven architecture patterns 2](https://medium.com/wix-engineering/6-event-driven-architecture-patterns-part-2-455cc73b22e1)
 
