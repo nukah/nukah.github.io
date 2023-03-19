@@ -1,5 +1,5 @@
 ---
-title: "Database column type overflow case"
+title: "Database interview cases"
 date: 2023-03-18T15:00:00+04:00
 tags: ['interview', 'engineering', 'case', 'database']
 ---
