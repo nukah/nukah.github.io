@@ -10,22 +10,26 @@ date: 2023-02-13
 
 # Short Summary
 
-My career started with quality assurance, then I moved on to automation, and finally I got into the actual design and implementation of systems.
+A long time ago, in a galaxy not so far away, my story began. I was born with a passion for technology, I was hooked on building things. I spent hours playing Legos and other construction toys, attempting to create something out of nothing. When I had my first glimpse of a PC at the age of 7, it was a game changer.
 
-I've worked with a variety of technologies over the last 13 years, including Ruby, Python, and recently Go. I like its efficiency in distributed, performance-oriented systems. I consider myself well versed in **architectural design and software development patterns** and conventions. I consider myself a big fan of clean and understandable code.
+After graduating from university, I started my professional career, first as a QA engineer, then as a junior software developer.
+I spent the next 8 years working as a software developer on various projects, rising from novice to principal engineer.
 
-My expertise includes design and development of high performance **distributed back-end applications**, management of software teams, **mentoring** of junior developers and problem solving. Throughout my career I have successfully managed projects from conception to completion with great results.
+Along the way, I've worked mostly with technologies like **Ruby**, later adopting the more appropriate **Golang** tech stack for better efficiency in distributed environments. This allowed me to gain experience in various **principles**, **conventions** and **patterns**.  I learnt how to design and build efficient facilities, both in terms of engineering and business. The constant struggle between engineering perfection and the ultimate goal became the new norm and was transformed into a **perpetual balance between business expectations and engineering craftsmanship**.
 
-I also excel at **designing complex solutions**, optimising code for performance, **troubleshooting systems** and developing secure applications. I have excellent **communication skills** which enable me to work effectively with those involved at all levels of the organisation.
+After a certain period of time, I moved from just writing the code to more fundamental activities instead of creating features, I created the architecture for entire applications. From being responsible only for the small part to being the owner of **delivering the business value**.
+My focus changed from pure engineering tasks to managing the very purpose of engineering: delivering impact.
 
-I have a **passion for technology** and a strong desire to keep abreast of the latest industry trends.
+This wasn't something that could have been done by a single person. Every great product requires a team of **exceptional individuals** to follow that journey. Techniques for building such teams, creating an efficient environment for all team members, and designing processes to help people achieve our goals became an integral part of my professional life. This journey has helped me to understand the value and strength of a **properly structured and motivated team**, and what it is capable of achieving with the right kind of leadership.
+
+The excitement of technology, the potential to contribute to something greater, the desire to create an impact that affects people's lives has helped me in my career. It is a **source of joy, excitement and passion**, not just a 9 to 5 job.
 
 ---
 
 ## Languages
 
 - Russian - Native
-- English - Advanced.
+- English - C1.
 
 ---
 
@@ -38,8 +42,8 @@ I have a **passion for technology** and a strong desire to keep abreast of the l
 ## Technology stack
 
 - Programming languages: `Go`, `Ruby`, `Elixir`, `Java`.
-- Data: `PostgreSQL`, `Redis`, `ElasticSearch`, `MongoDB`, `RDS`
-- Platform: `Docker`, `K8S`, `AWS`-compliant alternatives
+- Data: `PostgreSQL`, `MySQL`, `Redis`, `ElasticSearch`, `MongoDB`, `RDS`
+- Platform: `Docker`, `Kubernetes`, `AWS`
 - Data analysis/processing: `Apache Spark`, `Apache Hadoop`, `Apache Druid`
 - Data distribution: `RabbitMQ`, `Apache Kafka`, `Amazon SQS`
 
