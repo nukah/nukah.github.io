@@ -1,12 +1,13 @@
 ---
 title: "about me"
 date: 2023-02-13
+lastmod: 2023-04-23
 ---
 
 # General
 **current position**: *Engineering manager @ fintech*
 
-**age**: `37`
+**age**: `38`
 
 # Short Summary
 
@@ -150,11 +151,11 @@ Joost was started with a small team, having only 3 developers to start with. My 
 
 **position:** Principle software developer
 
-##### Summary
+**Summary**
 
 Rocketbank is a client-oriented banking service which is utilizing some of the underlying classical bank infrastructure providing user experience to clients through a mobile application. The main goal is to provide user experience and banking services to clients without the need for personal bank office visits or other conventional communication channels.
 
-#### Technical
+**Technical**
 
 My main responsibility was building up a back-office management subsystem through which clients were able to communicate and resolve their issues. Our main application was the RoR backend(which was built from the ground up aside from the main existing monolith application aggregating all the functionality) for the React Native front application.
 
@@ -174,13 +175,13 @@ Since the start, I was a single backend developer at our projects but at the end
 
 **position:** Software developer
 
-#### Summary
+**Summary**
 
 SourceLab was an outsourcing company working on a per-project basis. For the time being(about 6-7 months before the company going defunct) I was working on refactoring and maintaining of few legacy projects and the development of new projects from the ground up.
 
 We were using SCRUM methodology there with usual pre-day quick meetings, sprint retros, velocity tracking.
 
-#### Technical
+**Technical**
 
 Most of the new projects were based on rails4 stack using MySQL as data engine, with a couple of legacy rails2/rails3 projects that needed upgrading and refactoring.
 
@@ -192,11 +193,11 @@ Most of the new projects were based on rails4 stack using MySQL as data engine, 
 
 **position:** Software developer
 
-#### Summary
+**Summary**
 
 The main project in Social Quantum was the development of an internal ERP system for in-house use. The system consisted of multiple parts and modules covering all the aspects of the company lifecycle, including accounting, human resources, CRM integrations, financial planning, and reporting. My presence in the company concurred with the global redesign of those systems so I took part in both backend and frontend development. Blocks that are worth mentioning comprise working on analytics and reporting tools (mostly big aggregations on data engine part), software design of accounting, and financial submodules.
 
-#### Technical
+**Technical**
 
 System stack consisted of well-written and maintained rails4 applications with a huge focus on specs and tests (both unit and integrational), rationalized and mature feature designs, frequent code reviews, and pair development PostgreSQL/Redis/Memcache was used as data storage. Bootstrap/Jquery/Native js/SCSS/template engines on the front part.
 
@@ -208,7 +209,7 @@ System stack consisted of well-written and maintained rails4 applications with a
 
 **position:** Software developer
 
-#### Summary
+**Summary**
 
 Scade was a tinder-alike dating application that was born in the early 2010-s and lived through at least 2 rewrites before I was among the new team which took development. My task was to provide a new backend for rewritten front application(that was developed on Closure), aside from this I was responsible for creating a new communication service(written on go) liable for WebSocket connections with clients, which should've replaced the old NodeJS application that was experiencing load difficulties. The application was developed on top of the existing rails4 application with the grape as interface framework.
 
@@ -220,14 +221,8 @@ Scade was a tinder-alike dating application that was born in the early 2010-s an
 
 **position:** IT Consulter
 
-#### Summary
+**Summary**
 
 I was the part of IT team which was responsible for internal tools and instruments. One of my main goals there was creating a ticket system for inventorial requests/tasks. That application was developed on top of Redmine, heavily customized, and extended. Apart from that, many minor projects and applications helped to ease the company's lifecycle. The application was mostly written in python and ruby, using rails and Django.
 
 ---
-
-# Hobbies
-
-- My long-running interest is computer games, although for the last few years there is not much time for that
-- MTB
-- Snowboarding

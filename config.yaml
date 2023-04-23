@@ -6,6 +6,7 @@ theme: terminal
 pygmentsstyle: "solarized-dark"
 pygmentscodefences: true
 pygmentscodefencesguesssyntax: true
+enableGitInfo: true
 
 menu:
   main:
