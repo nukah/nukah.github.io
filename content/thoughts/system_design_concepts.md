@@ -8,6 +8,16 @@ In this article, i am going to get through key software design concepts and cons
 
 <!--more-->
 
+# Table of content
+- [CQRS](#cqrs)
+- [API Gateway](#api-gateway)
+- [Strangler](#strangler)
+- [Circuit Breaker](#circuit-breaker)
+- [Ambassador](#ambassador)
+- [Sharding](#sharding)
+- [Microservice architecture](#microservice-architecture)
+- [Event sourcing](#event-sourcing)
+
 ## CQRS
 
 #### What?
@@ -140,6 +150,12 @@ The Strangler Pattern is a software development technique that involves incremen
 - It may result in long adoption. Until then, both old and new applications will have to be in place. This can increase maintenance cost.
 
 ## Circuit Breaker
+`TODO`
+
+## Ambassador
+`TODO`
+
+## Sharding
 `TODO`
 
 ## Microservice architecture
