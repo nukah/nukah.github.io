@@ -18,6 +18,7 @@ In this article, i am going to get through key software design concepts and cons
 - [Microservice architecture](#microservice-architecture)
 - [Event sourcing](#event-sourcing)
 
+---
 ## CQRS
 
 #### What?
@@ -65,6 +66,8 @@ The CQRS architecture uses separate writing and reading models for commands and 
 
 - Potential consistency issues.
   As the read model is separate from the write model, there is a potential for consistency issues if changes to the write model are not propagated to the read model in a timely manner.
+
+---
 
 ## API Gateway
 
@@ -119,6 +122,8 @@ It acts as a reverse proxy, routing requests and handling tasks like authenticat
 - Cost.
   Especially for large deployments, API gateway services can be expensive.
 
+---
+
 ## Strangler
 
 #### What?
@@ -149,17 +154,27 @@ The Strangler Pattern is a software development technique that involves incremen
 - It may introduce complex application architecture if done wrong. The cost will increase exponentially.
 - It may result in long adoption. Until then, both old and new applications will have to be in place. This can increase maintenance cost.
 
+---
+
 ## Circuit Breaker
 `TODO`
+
+---
 
 ## Ambassador
 `TODO`
 
+---
+
 ## Sharding
 `TODO`
 
+---
+
 ## Microservice architecture
 `TODO`
+
+---
 
 ## Event sourcing
 `TODO`
