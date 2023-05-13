@@ -4,6 +4,14 @@ date: 2023-05-13T18:00:00+04:00
 tags: ['engineering', 'manual', 'development', 'best-practice']
 ---
 
+Developing software is not just about writing code.
+It is about creating a high-quality product that satisfies the needs of the customer while being maintainable, scalable, and efficient.
+In order to achieve this goal, it is important to follow best practices that have been developed over years of experience in the industry.
+
+In addition to the technical aspects of software development, it's important to consider the human aspect as well. A key factor in the success of a software development team is how well new developers are onboarded and integrated into the team's culture and practices. By providing a clear and simple onboarding process, new team members can quickly become productive and contribute to the success of the project.
+
+<!--more-->
+
 # Table of content
 1. [Code management conventions](#1-code-management-conventions)
 - - [Basics](#basics)
