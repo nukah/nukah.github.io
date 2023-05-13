@@ -5,7 +5,7 @@ tags: ['engineering', 'manual', 'development', 'best-practice']
 ---
 
 Developing software is not just about writing code.
-It is about creating a high-quality product that satisfies the needs of the customer while being maintainable, scalable, and efficient.
+It is about creating a high-quality product solution that satisfies the needs of the customer while being maintainable, scalable, and efficient.
 In order to achieve this goal, it is important to follow best practices that have been developed over years of experience in the industry.
 
 In addition to the technical aspects of software development, it's important to consider the human aspect as well. A key factor in the success of a software development team is how well new developers are onboarded and integrated into the team's culture and practices. By providing a clear and simple onboarding process, new team members can quickly become productive and contribute to the success of the project.
@@ -16,37 +16,85 @@ In addition to the technical aspects of software development, it's important to 
 - [Code management conventions](#1-code-management-conventions)
 - - [Basics](#basics)
 - - [Github flow](#github-flow)
+- - [Referrals](#referrals)
 - [Structuring conventions](#2-structuring-conventions)
 - - [Examples](#examples)
-- [Qualitative API documentation](#3-qualitative-api-documentation)
+- [Naming conventions](#3-naming-conventions)
+- - [Referrals](#referrals-1)
+- [Qualitative API documentation](#4-qualitative-documentation)
 - - [Examples](#examples-1)
-- [Code composition](#4-composition)
-- [Architectural patterns](#5-architectural-patterns)
-- [Frameworks and libraries](#6-framework-and-libraries)
-- [Metrics and measurements](#7-metrics-and-measurements)
+- - [Referrals](#referrals-2)
+- [Logic composition](#5-logic-composition)
 - - [Examples](#examples-2)
-- [Logging](#8-logging)
+- - [Referrals](#referrals-3)
+- [Architectural patterns](#6-architectural-patterns)
+- - [SOLID](#solid)
+- - [DRY](#dry)
+- - [KISS](#kiss)
+- - [Referrals](#referrals-4)
+- [Frameworks and libraries](#7-framework-and-libraries)
+- - [Referrals](#referrals-5)
+- [Testing](#8-testing)
+- - [Referrals](#referrals-6)
+- [Metrics and measurements](#9-metrics-and-measurements)
 - - [Examples](#examples-3)
-- [Error handling](#9-error-handling)
+- [Logging](#10-logging)
 - - [Examples](#examples-4)
+- [Error handling](#11-error-handling)
+- - [Examples](#examples-5)
 
-## 1. Code management conventions
+# 1. Code management practices
 
 Version control is an essential tool for managing code in any software project. Git is a popular and powerful version control system used by many developers and organizations.
 
-### Basics
+## Basics
 
 - Use branches to isolate changes and avoid conflicts. A branch is a separate line of development that allows you to work on a feature or bug fix without affecting the main codebase.
-- Name branches clearly and consistently. Use a naming convention that describes the purpose of the branch and makes it easy to identify. Always refer the task in the name, it will be much easier to track the origins of the change.
+- Name branches clearly and consistently.
+Use a naming convention that describes the purpose of the branch and makes it easy to identify.
+Always refer the task in the name, it will be much easier to track the origins of the change.
 For example, `feature/FC-123-add-loan-management` or `bugfix/fix-loan-controller`.
+Use variety of of branch tags to reflect the context of the change: `feature`,`bugfix`,`hotfix`,`refactoring`.
 - Write descriptive and meaningful commit messages. A commit message should explain what changes were made and why they were necessary. It's important to provide context and avoid ambiguity.
 - Keep the commit history clean and concise.
 Using rebase and squash in Git is a better practice than dealing with merge commits because it helps maintain a cleaner, more linear history. By squashing or combining related commits into one, the commit history is simplified and easier to follow.
 Additionally, rebasing helps keep the codebase up-to-date with the latest changes from the upstream branch. This makes it easier to resolve conflicts and avoids creating unnecessary merge commits that can clutter the commit history. In short, using rebase and squash in Git can lead to a cleaner, more organized, and easier to maintain codebase.
+    - Example of repository that utilises merge commits which branch off different versions of masters.
 
-### Github flow
+    ```yaml
+    * 0a1b2c3 (HEAD -> feature1) Merge branch 'master' into feature1
+    |\
+    | * 6d7e8f9 (origin/master, master) Add new feature A
+    | | * 2b3c4d5 (feature2) Merge branch 'master' into feature2
+    | | |\
+    | | | * 4e5f6g7 Add new feature B
+    | | |/
+    | |/|
+    | * | 8h9i0j1 Add bugfix C
+    | |/
+    | * 1k2l3m4 Add new feature D
+    |/
+    * 5n6o7p8 Initial commit
+    ```
 
-- [Github Flow](https://docs.github.com/en/get-started/quickstart/github-flow).
+    - Example of repository that utilises squash style of merging
+
+    ```yaml
+    * dcb5b76 (HEAD -> feature/new-feature) Commit message for squashed and rebased commits
+    * a5f84a9 Commit message for squashed and rebased commits
+    * 2c4a1d3 Commit message for squashed and rebased commits
+    * 90c5d08 Commit message for squashed and rebased commits
+    * e2f3c18 (master) Commit message on master
+    * 8f3da7f Commit message for squashed and rebased commits
+    * 7a482e5 Commit message for squashed and rebased commits
+    * 1346e22 Commit message for squashed and rebased commits
+    * 2d6c1f1 Commit message for squashed and rebased commits
+    ```
+
+
+## Github flow
+
+- Way to follow GithubFlow
     - Create a new branch: Create a new branch from the main branch that you are working on.
     - Add commits: Add commits to the branch as you work on the feature or bug fix. It's important to commit early and often.
     - Open a pull request: Once you have completed your work and pushed your commits to the branch, open a pull request (PR) against the main branch.
@@ -54,29 +102,34 @@ Additionally, rebasing helps keep the codebase up-to-date with the latest change
     - Merge the pull request: Once the changes have been reviewed and approved, you can merge the PR into the main branch. This will incorporate your changes into the codebase and make them available to everyone.
     - Deploy: With GitHub Flow, deploying your changes is integrated into the process. Once the changes are merged into the main branch, they can be deployed to production.
 
-## 2. Structuring conventions
+## Referrals
+
+- [GithubFlow Specification](https://docs.github.com/en/get-started/quickstart/github-flow)
+- [Branch naming conventions](https://www.scaler.com/topics/git/git-branch-naming-conventions/)
+
+# 2. Structuring conventions
 
 It is important to separate different concerns and modules properly. One of the common approaches is to divide the application into several major parts, such as API, LIB, and WORKER.
 
-### API
+**Api**
 
 The API section should contain everything that is related to the API, such as controllers, serializers, and routes. It is important to keep this section separate from the rest of the application, as it is often the entry point for external requests.
 
-### CORE
+**Core**
 
 The CORE section should contain everything that is related to business logic, such as models, services, and repositories. This section should be further divided into subdirectories based on domain entities. For example, an e-commerce application could have subdirectories for products, orders, and customers. Inside each subdirectory, it is recommended to further separate the functionality into actions, such as create, update, and delete.
 
-### LIB
+**Lib**
 
 The LIB directory, also known as the library directory. While the CORE directory contains the business logic functionality of the application, there are often other components that are required for this logic to work, such as third-party libraries or custom classes.
 
 By separating these components into the LIB directory, we can ensure that they are organized and easily accessible, while also keeping the business logic directory focused on the core functionality of the application.
 
-### WORKER
+**Worker**
 
 The WORKER section should contain everything that is related to background processing and event handling, such as background jobs and event listeners. This section should also be further divided into subdirectories based on domain entities or functional categories.
 
-### Examples
+## Examples
 
 ```ruby
 app/
@@ -122,7 +175,26 @@ app/
       send_email_on_signup.rb
 ```
 
-## 3. Qualitative API documentation
+# 3. Naming conventions
+
+Naming conventions play a crucial role in the overall readability and maintainability of your code. Therefore, it is important to follow some standard conventions when naming your entities.
+
+One such convention is the A/HC/LC pattern, which stands for Abbreviation, High context, and Low context.
+
+The convention provides a structure for naming entities based on their level of abstraction, making it easier for developers to understand the intent of the code.
+
+| Name | Prefix | Action (A) | High context (HC) | Low context (LC) |
+| --- | --- | --- | --- | --- |
+| getUser |  | get | User |  |
+| getUserMessages |  | get | User | Messages |
+| handleClickOutside |  | handle | Click | Outside |
+| shouldDisplayMessage | should | Display | Message |  |
+
+## Referrals
+
+- [A/HC/LC convention](https://github.com/kettanaito/naming-cheatsheet)
+
+# 4. Qualitative API documentation
 
 API documentation is crucial for the development process and maintenance of the project. It provides a clear description of all available endpoints, their parameters, response codes, and data models. OpenAPI is a widely used standard for documenting APIs that helps developers understand and utilize your API.
 
@@ -144,7 +216,7 @@ Properly documenting your API using OpenAPI can improve the quality of your prod
 - It can also make it easier for new developers to onboard and contribute to your project, which can improve the speed and efficiency of development.
 - Additionally, clear and concise API documentation can improve the overall user experience of your product by making it easier for developers to integrate with your API.
 
-### Examples
+## Examples
 
 ```yaml
 openapi: 3.0.0
@@ -213,7 +285,13 @@ components:
         - updated_at
 ```
 
-## 4. Composition
+## Referrals
+
+- [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0)
+- [OpenAPI Tooling](https://openapi.tools/)
+- [Stoplight API Management system](https://stoplight.io/)
+
+# 5. Logic composition
 
 Code composition can be improved by adopting an approach that involves:
 
@@ -226,6 +304,8 @@ Code composition can be improved by adopting an approach that involves:
 - Writing clean, maintainable code that results in higher quality software.
 
 These practices are essential for achieving good code composition, which is crucial for developing software that is efficient, scalable, and easy to maintain.
+
+## Examples
 
 ```ruby
 module Orders
@@ -290,11 +370,20 @@ module Orders
 end
 ```
 
-## 5. Architectural patterns
+## Referrals
 
-**SOLID:** This stands for Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
+- [Chain of responsibility pattern](https://refactoring.guru/design-patterns/chain-of-responsibility)
+- [Command pattern](https://refactoring.guru/design-patterns/command)
 
-- Single Responsibility Principle (SRP): Each class or module should have only one responsibility, which should be encapsulated within that unit. This helps to avoid "God classes" and makes your code more modular and flexible.
+# 6. Architectural patterns
+
+## SOLID
+
+This stands for Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
+
+### Single Responsibility Principle (SRP)
+
+Each class or module should have only one responsibility, which should be encapsulated within that unit. This helps to avoid "God classes" and makes your code more modular and flexible.
 
 ```ruby
 # BAD: A class that violates SRP
@@ -342,7 +431,9 @@ class Authenticator
 end
 ```
 
-- Open-Closed Principle (OCP): Your code should be open for extension but closed for modification. This means that you should be able to add new functionality to your application without modifying existing code, which helps to reduce the risk of introducing bugs.
+### Open-Closed Principle (OCP)
+
+Your code should be open for extension but closed for modification. This means that you should be able to add new functionality to your application without modifying existing code, which helps to reduce the risk of introducing bugs.
 
 ```ruby
 # BAD: A class that violates OCP
@@ -397,7 +488,9 @@ class DiscountCalculator < Calculator
 end
 ```
 
-- Liskov Substitution Principle (LSP): Subtypes should be substitutable for their base types without affecting the correctness of the program. This means that you should be able to use a subclass wherever the superclass is expected, without causing unexpected behavior.
+### Liskov Substitution Principle (LSP)
+
+Subtypes should be substitutable for their base types without affecting the correctness of the program. This means that you should be able to use a subclass wherever the superclass is expected, without causing unexpected behavior.
 
 ```ruby
 # BAD: A class hierarchy that violates LSP
@@ -451,7 +544,9 @@ class Square < Shape
 end
 ```
 
-- Interface Segregation Principle (ISP): Clients should not be forced to depend on interfaces they do not use. This means that you should split large interfaces into smaller, more focused ones to avoid unnecessary dependencies.
+### Interface Segregation Principle (ISP)
+
+Clients should not be forced to depend on interfaces they do not use. This means that you should split large interfaces into smaller, more focused ones to avoid unnecessary dependencies.
 
 ```ruby
 # BAD: A class that violates ISP
@@ -501,7 +596,9 @@ class Bird < FlyingAnimal
 end
 ```
 
-- Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions. This means that you should depend on abstractions (interfaces) instead of concrete implementations, which makes your code more flexible and easier to test.
+### Dependency Inversion Principle (DIP)
+
+High-level modules should not depend on low-level modules. Both should depend on abstractions. This means that you should depend on abstractions (interfaces) instead of concrete implementations, which makes your code more flexible and easier to test.
 
 ```ruby
 # BAD: A class that violates DIP
@@ -546,19 +643,30 @@ service = UserService.new(repository)
 service.create_user("John", "john@example.com")
 ```
 
-**DRY:** This stands for Don't Repeat Yourself. This principle encourages you to avoid duplicating code by creating reusable functions or modules. Some rules and practices that follow DRY principles are:
+## DRY
+
+This stands for Don't Repeat Yourself. This principle encourages you to avoid duplicating code by creating reusable functions or modules. Some rules and practices that follow DRY principles are:
 
 - Extracting common functionality into shared modules or libraries to avoid duplication.
 - Using helper functions or utility classes to encapsulate common operations.
 - Refactoring code to remove duplication and increase reuse.
 
-**KISS:** This stands for Keep It Simple, Stupid. This principle encourages you to write simple, clear, and easy-to-understand code. Some rules and practices that follow KISS principles are:
+## KISS
+
+This stands for Keep It Simple, Stupid. This principle encourages you to write simple, clear, and easy-to-understand code. Some rules and practices that follow KISS principles are:
 
 - Writing code that is easy to read and understand.
 - Avoiding unnecessary complexity, such as over-engineering or premature optimization.
 - Using simple and straightforward algorithms and data structures.
 
-## 6. Framework and libraries
+## Referrals
+
+- [KISS Definition](https://people.apache.org/~fhanik/kiss.html)
+- [DRY Definition](https://www.plutora.com/blog/understanding-the-dry-dont-repeat-yourself-principle)
+- [SOLID Definition](https://www.freecodecamp.org/news/solid-design-principles-in-software-development/)
+- [Architectural Patterns Catalogue](https://refactoring.guru/design-patterns/catalog)
+
+# 7. Framework and libraries
 
 - DRY: A library that helps to reduce code duplication and promotes a DRY (Don't Repeat Yourself) coding style. It provides utility classes and methods that can be used across different parts of the application to avoid writing similar code repeatedly.
 - LightService: A library that helps to encapsulate business logic into a single object, making it easier to manage and test. It allows developers to define a set of actions that need to be performed to accomplish a specific task.
@@ -567,7 +675,54 @@ service.create_user("John", "john@example.com")
 - Grape: A lightweight framework for building RESTful APIs in Ruby. It provides a DSL (Domain-Specific Language) for defining endpoints, and supports various authentication and authorization strategies.
 - Swagger: A set of tools for designing, building, documenting, and consuming RESTful APIs. It provides a standardized way to describe API endpoints and their parameters, responses, and authentication requirements.
 
-## 7. Metrics and measurements
+## Referrals
+
+- [JSONAPI Specification](https://jsonapi.org/)
+- [LightService](https://github.com/adomokos/light-service)
+- [Ruby On Rails](https://rubyonrails.org/)
+- [Grape](https://github.com/ruby-grape/grape)
+- [Swagger](https://medium.com/@sushildamdhere/how-to-document-rest-apis-with-swagger-and-ruby-on-rails-ae4e13177f5d)
+- [DRY](https://dry-rb.org/)
+
+# 8. Testing
+
+Testing is a vital part of the software development process. It ensures that our code works as intended and catches any bugs or problems before they reach production. Here are some best practices and approaches you should adopt for testing your code:
+
+- **Write tests early and often**
+
+Tests should be written as early as possible in the development process and run frequently to ensure that code changes do not introduce new problems.
+- **Use automated testing**
+
+Automated tests allow you to test quickly and consistently, and are more efficient and reliable than manual tests. This includes unit testing, integration testing and end-to-end testing.
+- **Test for different scenarios**
+
+Make sure that you test for both the normal and the edge cases, as well as for any error conditions that might occur. This includes testing for invalid input, testing for unexpected behaviour and testing for failure modes.
+- **Keep tests isolated**
+
+Tests should be written to be independent of each other, that is, the result of one test should not affect the result of another. This ensures that tests are reliable and can be run in any order.
+- **Use code coverage tools**
+
+Code coverage tools can help identify under-tested areas of code, enabling more comprehensive testing.
+
+There are several popular approaches to testing, including
+
+- **Unit testing**
+
+These tests isolate individual code units or components. Unit tests are usually automated and focus on testing the functionality of small pieces of code.
+- **Integration testing**
+
+This is the testing of how different units of code work together as part of a larger system. Integration tests are typically automated. They can be used to identify problems with the interaction between different components.
+- **End-to-end testing**
+
+This is where the entire system is tested as a whole, from the beginning to the end. End-to-end tests are typically automated and can be used to identify problems with overall system functionality.
+
+Proper testing will ensure that the software is reliable, efficient and effective in terms of the user experience.
+
+## Referrals
+
+- [How to write good tests](https://leanylabs.com/blog/good-unit-tests/)
+
+# 9. Metrics and measurements
 
 Metrics and analysis are crucial for identifying bottlenecks and improving the performance and scalability of Ruby applications. Here are some important points to consider when designing and analyzing metrics:
 
@@ -577,7 +732,7 @@ Metrics and analysis are crucial for identifying bottlenecks and improving the p
 - Set baselines and benchmarks: To track performance over time, set baselines and benchmarks for key metrics. This will help identify performance trends and spot deviations from expected performance.
 - Use StatsD and Datadog library: From a technical perspective, metrics should be provided through the use of StatsD and the Datadog library. StatsD is a lightweight daemon that collects and aggregates metrics, while Datadog provides a platform for storing, visualizing, and analyzing metrics.
 
-### Examples
+## Examples
 
 **Increment**
 
@@ -621,7 +776,7 @@ def process_data(data)
 end
 ```
 
-## 8. Logging
+# 10. Logging
 
 Logging is an essential part of any application's development and operation. It helps developers to diagnose issues, monitor performance, and gain insights into how the application is behaving in production.
 
@@ -632,7 +787,7 @@ Logging is an essential part of any application's development and operation. It 
 - Include relevant information
     - In addition to the message itself, log entries should include relevant information such as the timestamp, the severity level, the source of the event, and any relevant metadata. It's important to avoid including sensitive information like passwords or other confidential data in log entries.
 
-### Examples
+## **Examples**
 
 ```ruby
 require 'semantic_logger'
@@ -658,7 +813,7 @@ rescue StandardError => e
 end
 ```
 
-## 9. Error handling
+# 11. Error handling
 
 Error handling and error tracking are critical aspects of software development. Errors can occur at any time during the execution of an application. Without proper handling and tracking mechanisms, it can be difficult to identify the root cause of issues and take corrective action.
 
@@ -668,7 +823,7 @@ Furthermore, error tracking provides valuable insights into the application's pe
 
 Investing time and effort in proper error handling and error tracking can save time and resources in the long run. By reducing the occurrence of errors and quickly resolving issues when they do occur, developers can improve the reliability of their applications and provide a better user experience.
 
-### Examples
+## Examples
 
 ```ruby
 require 'sentry-ruby'
