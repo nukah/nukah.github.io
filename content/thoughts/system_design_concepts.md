@@ -4,7 +4,7 @@ date: 2023-05-13T21:09:14+04:00
 tags: ['engineering', 'system design', 'development']
 ---
 
-In this article, i am going to get through key software design concepts and considerations preferred or sometimes required in modern software development environment.
+In this article, I am going to go through the key software design concepts and considerations that are preferred or sometimes required in the modern software development environment.
 
 <!--more-->
 
