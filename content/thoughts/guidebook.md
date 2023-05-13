@@ -13,21 +13,21 @@ In addition to the technical aspects of software development, it's important to 
 <!--more-->
 
 # Table of content
-1. [Code management conventions](#1-code-management-conventions)
+- [Code management conventions](#1-code-management-conventions)
 - - [Basics](#basics)
 - - [Github flow](#github-flow)
-2. [Structuring conventions](#2-structuring-conventions)
+- [Structuring conventions](#2-structuring-conventions)
 - - [Examples](#examples)
-3. [Qualitative API documentation](#3-qualitative-api-documentation)
+- [Qualitative API documentation](#3-qualitative-api-documentation)
 - - [Examples](#examples-1)
-4. [Code composition](#4-composition)
-5. [Architectural patterns](#5-architectural-patterns)
-6. [Frameworks and libraries](#6-framework-and-libraries)
-7. [Metrics and measurements](#7-metrics-and-measurements)
+- [Code composition](#4-composition)
+- [Architectural patterns](#5-architectural-patterns)
+- [Frameworks and libraries](#6-framework-and-libraries)
+- [Metrics and measurements](#7-metrics-and-measurements)
 - - [Examples](#examples-2)
-8. [Logging](#8-logging)
+- [Logging](#8-logging)
 - - [Examples](#examples-3)
-9. [Error handling](#9-error-handling)
+- [Error handling](#9-error-handling)
 - - [Examples](#examples-4)
 
 ## 1. Code management conventions
