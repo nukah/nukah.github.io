@@ -43,13 +43,13 @@ The excitement of technology, the potential to contribute to something greater, 
 - Data distribution: `RabbitMQ`, `Apache Kafka`, `Amazon SQS`
 - Experience with cloud computing platforms such as Amazon Web Services (AWS)  using technologies such as Docker, K8s, and IaC.
 - Able to analyze and troubleshoot technical issues, using techniques such as root cause analysis (RCA), fault tolerance, and chaos engineering.
-- Able to evaluate and recommend emerging technologies, using techniques like technology radar, proof of concept (POC), and experimentation.
+- Able to use techniques such as technology radar, proof of concept (POC) and experimentation to evaluate and recommend emerging technologies.
 
 ## Soft
-- Strong leadership skills, with a focus on creating a shared sense of purpose and vision, and inspiring team members to achieve their goals and find joy in their work.
-- Strong conflict resolution and problem-solving skills, with a focus on resolving conflicts in a constructive and positive manner.
-- Strategic thinking and business acumen, with a focus on customer-centricity, product-market fit, and growth hacking.
+- Strong leadership, focusing on building shared purpose and vision, and motivating team members to achieve goals and enjoy the work.
+- Strong conflict resolution and problem solving skills with a focus on constructive and positive conflict resolution.
 - Collaborative mindset, with experience working cross-functionally using techniques like Scrum, Kanban.
+- Passion for talent development and continuous learning, with a focus on creating a culture of growth and development for all team members.
 
 ---
 
