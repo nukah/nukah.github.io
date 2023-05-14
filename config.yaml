@@ -24,7 +24,7 @@ params:
   customcss:
     - css/686.css
   mode: light
-  favicon: "favicon.ico"
+  favicon: "/favicon.ico"
   showMenuItems: 5
   readingTime: true
   social:
