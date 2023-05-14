@@ -20,47 +20,53 @@ Version control is an essential tool for managing code in any software project. 
 
 ## Basics
 
-- Use branches to isolate changes and avoid conflicts. A branch is a separate line of development that allows you to work on a feature or bug fix without affecting the main codebase.
-- Name branches clearly and consistently.
+Use branches to isolate changes and avoid conflicts.
+  A branch is a separate line of development that allows you to work on a feature or bug fix without affecting the main codebase.
+
+Name branches clearly and consistently.
 Use a naming convention that describes the purpose of the branch and makes it easy to identify.
 Always refer the task in the name, it will be much easier to track the origins of the change.
 For example, `feature/FC-123-add-loan-management` or `bugfix/fix-loan-controller`.
 Use variety of of branch tags to reflect the context of the change: `feature`,`bugfix`,`hotfix`,`refactoring`.
-- Write descriptive and meaningful commit messages. A commit message should explain what changes were made and why they were necessary. It's important to provide context and avoid ambiguity.
-- Keep the commit history clean and concise.
+
+Write descriptive and meaningful commit messages. A commit message should explain what changes were made and why they were necessary. It's important to provide context and avoid ambiguity.
+
+Keep the commit history clean and concise.
 Using rebase and squash in Git is a better practice than dealing with merge commits because it helps maintain a cleaner, more linear history. By squashing or combining related commits into one, the commit history is simplified and easier to follow.
+
 Additionally, rebasing helps keep the codebase up-to-date with the latest changes from the upstream branch. This makes it easier to resolve conflicts and avoids creating unnecessary merge commits that can clutter the commit history. In short, using rebase and squash in Git can lead to a cleaner, more organized, and easier to maintain codebase.
-    - Example of repository that utilises merge commits which branch off different versions of masters.
 
-    ```yaml
-    * 0a1b2c3 (HEAD -> feature1) Merge branch 'master' into feature1
-    |\
-    | * 6d7e8f9 (origin/master, master) Add new feature A
-    | | * 2b3c4d5 (feature2) Merge branch 'master' into feature2
-    | | |\
-    | | | * 4e5f6g7 Add new feature B
-    | | |/
-    | |/|
-    | * | 8h9i0j1 Add bugfix C
-    | |/
-    | * 1k2l3m4 Add new feature D
-    |/
-    * 5n6o7p8 Initial commit
-    ```
+ Example of repository that utilises merge commits which branch off different versions of masters.
 
-    - Example of repository that utilises squash style of merging
+  ```yaml
+  * 0a1b2c3 (HEAD -> feature1) Merge branch 'master' into feature1
+  |\
+  | * 6d7e8f9 (origin/master, master) Add new feature A
+  | | * 2b3c4d5 (feature2) Merge branch 'master' into feature2
+  | | |\
+  | | | * 4e5f6g7 Add new feature B
+  | | |/
+  | |/|
+  | * | 8h9i0j1 Add bugfix C
+  | |/
+  | * 1k2l3m4 Add new feature D
+  |/
+  * 5n6o7p8 Initial commit
+  ```
 
-    ```yaml
-    * dcb5b76 (HEAD -> feature/new-feature) Commit message for squashed and rebased commits
-    * a5f84a9 Commit message for squashed and rebased commits
-    * 2c4a1d3 Commit message for squashed and rebased commits
-    * 90c5d08 Commit message for squashed and rebased commits
-    * e2f3c18 (master) Commit message on master
-    * 8f3da7f Commit message for squashed and rebased commits
-    * 7a482e5 Commit message for squashed and rebased commits
-    * 1346e22 Commit message for squashed and rebased commits
-    * 2d6c1f1 Commit message for squashed and rebased commits
-    ```
+Example of repository that utilises squash style of merging
+
+```yaml
+* dcb5b76 (HEAD -> feature/new-feature) Commit message for squashed and rebased commits
+* a5f84a9 Commit message for squashed and rebased commits
+* 2c4a1d3 Commit message for squashed and rebased commits
+* 90c5d08 Commit message for squashed and rebased commits
+* e2f3c18 (master) Commit message on master
+* 8f3da7f Commit message for squashed and rebased commits
+* 7a482e5 Commit message for squashed and rebased commits
+* 1346e22 Commit message for squashed and rebased commits
+* 2d6c1f1 Commit message for squashed and rebased commits
+```
 
 
 ## Github flow
