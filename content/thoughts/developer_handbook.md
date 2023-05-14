@@ -152,6 +152,9 @@ app/
       send_email_on_signup.rb
 ```
 
+## Referrals
+- [Domain directory structure](https://betterprogramming.pub/divide-code-by-domains-and-features-and-keep-it-scalable-bb5bd66cf3d2)
+
 # Naming conventions
 
 Naming conventions play a crucial role in the overall readability and maintainability of your code. Therefore, it is important to follow some standard conventions when naming your entities.
