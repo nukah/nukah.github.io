@@ -1,0 +1,32 @@
+:root {
+  --maincolor: #FF8983;
+  --bordercl: #FF818F;
+  --callouctcolor: #FCCA46;
+  --hovercolor: #FFC0B8;
+  --darkMaincolor: #8CA0D7;
+}
+
+a:hover {
+  color: #C25452;
+}
+
+code {
+  background-color: #FFE4DF;
+  padding: .1em .2em;
+  color:#C25452;
+}
+
+html {
+  color: #402E32;
+  font-family: 'Noto Sans Mono', monospace;
+  font-size: 17px;
+  line-height: 1.8em;
+  background-color:#DFE0DF;
+}
+
+p {
+  font-family: 'Noto Sans Mono', monospace;
+  line-height: 1.5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&family=Work+Sans:wght@500&display=swap');

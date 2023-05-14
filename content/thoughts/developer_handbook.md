@@ -1,8 +1,10 @@
 ---
-title: "Developer guidebook"
+title: "Developer handbook"
 date: 2023-05-13T18:00:00+04:00
 tags: ['engineering', 'manual', 'development', 'best-practice']
 ---
+
+# Introduction
 
 Developing software is not just about writing code.
 It is about creating a high-quality product solution that satisfies the needs of the customer while being maintainable, scalable, and efficient.
@@ -12,38 +14,7 @@ In addition to the technical aspects of software development, it's important to 
 
 <!--more-->
 
-# Table of content
-- [Code management conventions](#1-code-management-conventions)
-- - [Basics](#basics)
-- - [Github flow](#github-flow)
-- - [Referrals](#referrals)
-- [Structuring conventions](#2-structuring-conventions)
-- - [Examples](#examples)
-- [Naming conventions](#3-naming-conventions)
-- - [Referrals](#referrals-1)
-- [Qualitative API documentation](#4-qualitative-documentation)
-- - [Examples](#examples-1)
-- - [Referrals](#referrals-2)
-- [Logic composition](#5-logic-composition)
-- - [Examples](#examples-2)
-- - [Referrals](#referrals-3)
-- [Architectural patterns](#6-architectural-patterns)
-- - [SOLID](#solid)
-- - [DRY](#dry)
-- - [KISS](#kiss)
-- - [Referrals](#referrals-4)
-- [Frameworks and libraries](#7-framework-and-libraries)
-- - [Referrals](#referrals-5)
-- [Testing](#8-testing)
-- - [Referrals](#referrals-6)
-- [Metrics and measurements](#9-metrics-and-measurements)
-- - [Examples](#examples-3)
-- [Logging](#10-logging)
-- - [Examples](#examples-4)
-- [Error handling](#11-error-handling)
-- - [Examples](#examples-5)
-
-# 1. Code management practices
+# Code management practices
 
 Version control is an essential tool for managing code in any software project. Git is a popular and powerful version control system used by many developers and organizations.
 
@@ -107,7 +78,7 @@ Additionally, rebasing helps keep the codebase up-to-date with the latest change
 - [GithubFlow Specification](https://docs.github.com/en/get-started/quickstart/github-flow)
 - [Branch naming conventions](https://www.scaler.com/topics/git/git-branch-naming-conventions/)
 
-# 2. Structuring conventions
+# Structuring conventions
 
 It is important to separate different concerns and modules properly. One of the common approaches is to divide the application into several major parts, such as API, LIB, and WORKER.
 
@@ -175,7 +146,7 @@ app/
       send_email_on_signup.rb
 ```
 
-# 3. Naming conventions
+# Naming conventions
 
 Naming conventions play a crucial role in the overall readability and maintainability of your code. Therefore, it is important to follow some standard conventions when naming your entities.
 
@@ -194,7 +165,7 @@ The convention provides a structure for naming entities based on their level of 
 
 - [A/HC/LC convention](https://github.com/kettanaito/naming-cheatsheet)
 
-# 4. Qualitative API documentation
+# Qualitative API documentation
 
 API documentation is crucial for the development process and maintenance of the project. It provides a clear description of all available endpoints, their parameters, response codes, and data models. OpenAPI is a widely used standard for documenting APIs that helps developers understand and utilize your API.
 
@@ -291,7 +262,7 @@ components:
 - [OpenAPI Tooling](https://openapi.tools/)
 - [Stoplight API Management system](https://stoplight.io/)
 
-# 5. Logic composition
+# Logic composition
 
 Code composition can be improved by adopting an approach that involves:
 
@@ -375,7 +346,7 @@ end
 - [Chain of responsibility pattern](https://refactoring.guru/design-patterns/chain-of-responsibility)
 - [Command pattern](https://refactoring.guru/design-patterns/command)
 
-# 6. Architectural patterns
+# Architectural patterns
 
 ## SOLID
 
@@ -666,7 +637,7 @@ This stands for Keep It Simple, Stupid. This principle encourages you to write s
 - [SOLID Definition](https://www.freecodecamp.org/news/solid-design-principles-in-software-development/)
 - [Architectural Patterns Catalogue](https://refactoring.guru/design-patterns/catalog)
 
-# 7. Framework and libraries
+# Framework and libraries
 
 - DRY: A library that helps to reduce code duplication and promotes a DRY (Don't Repeat Yourself) coding style. It provides utility classes and methods that can be used across different parts of the application to avoid writing similar code repeatedly.
 - LightService: A library that helps to encapsulate business logic into a single object, making it easier to manage and test. It allows developers to define a set of actions that need to be performed to accomplish a specific task.
@@ -684,7 +655,7 @@ This stands for Keep It Simple, Stupid. This principle encourages you to write s
 - [Swagger](https://medium.com/@sushildamdhere/how-to-document-rest-apis-with-swagger-and-ruby-on-rails-ae4e13177f5d)
 - [DRY](https://dry-rb.org/)
 
-# 8. Testing
+# Testing
 
 Testing is a vital part of the software development process. It ensures that our code works as intended and catches any bugs or problems before they reach production. Here are some best practices and approaches you should adopt for testing your code:
 
@@ -722,7 +693,7 @@ Proper testing will ensure that the software is reliable, efficient and effectiv
 
 - [How to write good tests](https://leanylabs.com/blog/good-unit-tests/)
 
-# 9. Metrics and measurements
+# Metrics and measurements
 
 Metrics and analysis are crucial for identifying bottlenecks and improving the performance and scalability of Ruby applications. Here are some important points to consider when designing and analyzing metrics:
 
@@ -776,7 +747,7 @@ def process_data(data)
 end
 ```
 
-# 10. Logging
+# Logging
 
 Logging is an essential part of any application's development and operation. It helps developers to diagnose issues, monitor performance, and gain insights into how the application is behaving in production.
 
@@ -787,7 +758,7 @@ Logging is an essential part of any application's development and operation. It 
 - Include relevant information
     - In addition to the message itself, log entries should include relevant information such as the timestamp, the severity level, the source of the event, and any relevant metadata. It's important to avoid including sensitive information like passwords or other confidential data in log entries.
 
-## **Examples**
+## Examples
 
 ```ruby
 require 'semantic_logger'
@@ -813,7 +784,7 @@ rescue StandardError => e
 end
 ```
 
-# 11. Error handling
+# Error handling
 
 Error handling and error tracking are critical aspects of software development. Errors can occur at any time during the execution of an application. Without proper handling and tracking mechanisms, it can be difficult to identify the root cause of issues and take corrective action.
 

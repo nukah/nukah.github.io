@@ -1,9 +1,9 @@
 baseURL: https://x686.pro/
 languageCode: en-us
-title: private.space
-theme: terminal
+title: mighty.private.space
+theme: archie
 
-pygmentsstyle: "solarized-dark"
+pygmentsstyle: "catppuccin-frappe"
 pygmentscodefences: true
 pygmentscodefencesguesssyntax: true
 enableGitInfo: true
@@ -21,14 +21,11 @@ menu:
       weight: 3
 
 params:
-  contentTypeName: "thoughts"
-  themeColor: purple
+  customcss:
+    - css/686.css
+  mode: light
   favicon: "favicon.ico"
   showMenuItems: 5
-  showLanguageSelector: false
-  fullWidthTheme: false
-  centerTheme: true
-  showLastUpdated: true
   readingTime: true
   social:
     - name: "Github"
@@ -40,3 +37,9 @@ params:
     - name: "Email"
       icon: "at-sign"
       url: "mailto:me@x686.pro"
+
+markup:
+  tableOfContents:
+    endLevel: 4
+    ordered: false
+    startLevel: 1

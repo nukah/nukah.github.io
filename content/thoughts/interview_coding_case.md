@@ -1,5 +1,5 @@
 ---
-title: "Assessment check example"
+title: "[Interview] Coding assessment"
 date: 2023-02-19T14:53:34+06:00
 tldr: Example of assessment story
 tags: ['interview', 'engineering']
@@ -44,8 +44,13 @@ params:
 response:
 ```json
 {
-  data:[
-    { "code": "VTB_M", name: "VTB Mayakovskaya", lat: 55.770935, long: 37.596461 },
+  "data": [
+    {
+      "code": "VTB_M",
+      "name": "VTB Mayakovskaya",
+      "lat": 55.770935,
+      "long": 37.596461
+    },
       ...
   ]
 }

@@ -1,27 +1,35 @@
 ---
-title: "Database interview cases"
+title: "[Interview] Database query cases"
 date: 2023-03-18T15:00:00+04:00
 tags: ['interview', 'engineering', 'case', 'database']
 ---
 
-# Database interview questions
-Here is the list of tasks which can be used to verify knowledge of working with various databases.
+# Introduction.
+Software developers need to possess a range of skills and knowledge in order to be successful in their roles. One area that is particularly important is proficiency in working with databases. Databases are an essential component of many software systems, and developers who can work effectively with them are in high demand.
+
+In this article, i will provide several tasks that software developers can use to assess their knowledge and skills in working with databases.
 
 <!--more-->
-## Database query performance case
+
+# Database query performance case
 
 - Create a multi-column table and insert multiple rows.
 - Create indexes on several columns which are used in the query.
 - Create a query that shows fast performance when executed with EXPLAIN, but the actual query execution results in a long wait.
 - Explain why the query, which appears to perform fast when EXPLAIN is run, actually performs slowly, and what might explain this difference in performance.
 
-## Query composition #1
+# Query composition #1
 Write a query that selects the top 10 best-selling products over the last 3 months from the orders table.
 
-### Input data:
-Orders table with columns: order_id, customer_id, product_id, order_date, order_quantity.
+## Input data:
+Orders table with columns
+- order_id
+- customer_id
+- product_id
+- order_date
+- order_quantity
 
-### Table schema:
+## Table schema:
 
 ```sql
 CREATE TABLE orders (
@@ -33,7 +41,7 @@ CREATE TABLE orders (
 );
 ```
 
-### Sample data:
+## Sample data:
 ```sql
 INSERT INTO orders (customer_id, product_id, order_date, order_quantity) VALUES
 (1, 1, '2022-01-01', 5),
@@ -47,20 +55,25 @@ INSERT INTO orders (customer_id, product_id, order_date, order_quantity) VALUES
 (4, 3, '2022-04-01', 2);
 ```
 
-### Expected output:
+## Expected output:
 
 - product_id
 - total_quantity (sum of order_quantity for this product over the last 3 months)
 
-## Query composition #2
+# Query composition #2
 
-### Task
+## Task
 Write a query to select customers who have not placed orders in over 6 months.
 
-### Input data:
-Orders table with columns: order_id, customer_id, product_id, order_date, order_quantity.
+## Input data:
+Orders table with columns:
+- order_id
+- customer_id
+- product_id
+- order_date
+- order_quantity.
 
-### Table schema:
+## Table schema:
 
 ```sql
 CREATE TABLE orders (
@@ -71,7 +84,7 @@ CREATE TABLE orders (
     order_quantity INTEGER NOT NULL
 );
 ```
-### Sample data:
+## Sample data:
 
 ```sql
 INSERT INTO orders (customer_id, product_id, order_date, order_quantity) VALUES
@@ -86,14 +99,14 @@ INSERT INTO orders (customer_id, product_id, order_date, order_quantity) VALUES
 (4, 3, '2022-04-01', 2);
 ```
 
-### Expected output:
+## Expected output:
 - customer_id
 
-## Optimising a query using partitions
+# Optimising a query using partitions
 
 There is an SQL query that runs rather slowly on a large amount of data. The query has to be optimized using table partitions.
 
-### Input data:
+## Input data:
 ```sql
 SELECT COUNT(*), date_trunc('day', created_at)
 FROM my_table
@@ -102,7 +115,7 @@ GROUP BY date_trunc('day', created_at)
 ORDER BY date_trunc('day', created_at);
 ```
 
-### Test data:
+## Test data:
 - Table "my_table" with 1 billion records.
 - The "created_at" column is of data type timestamp with time zone.
 - Partitioning the table by "created_at" column by month range.

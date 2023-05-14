@@ -1,15 +1,15 @@
 ---
 title: "about me"
 date: 2023-02-13
-lastmod: 2023-04-23
+lastmod: 2023-05-14
 ---
 
-# General
-**current position**: *Engineering manager @ fintech*
+# Bio
+**current position**: **engineering manager** @ fintech
 
 **age**: `38`
 
-# Short Summary
+# Backstory
 
 A long time ago, in a galaxy not so far away, my story began. I was born with a passion for technology, I was hooked on building things. I spent hours playing Legos and other construction toys, attempting to create something out of nothing. When I had my first glimpse of a PC at the age of 7, it was a game changer.
 
@@ -27,26 +27,29 @@ The excitement of technology, the potential to contribute to something greater, 
 
 ---
 
-## Languages
+# Languages
 
 - Russian - Native
 - English - C1.
 
 ---
 
-## Education
+# Knowledge
 
-1. MEPHI (Moscow Engineering Physics Institute), Natalia Nesterova Moscow Academy. Graduated in 2008 with a master's degree in "Industrial Control Systems" or ASUP as it's called here.
-
----
-
-## Technology stack
-
+## Hard
 - Programming languages: `Go`, `Ruby`, `Elixir`, `Java`.
-- Data: `PostgreSQL`, `MySQL`, `Redis`, `ElasticSearch`, `MongoDB`, `RDS`
-- Platform: `Docker`, `Kubernetes`, `AWS`
+- Data: `PostgreSQL`, `MySQL`, `Redis`, `ElasticSearch`, `MongoDB`
 - Data analysis/processing: `Apache Spark`, `Apache Hadoop`, `Apache Druid`
 - Data distribution: `RabbitMQ`, `Apache Kafka`, `Amazon SQS`
+- Experience with cloud computing platforms such as Amazon Web Services (AWS)  using technologies such as Docker, K8s, and IaC.
+- Able to analyze and troubleshoot technical issues, using techniques such as root cause analysis (RCA), fault tolerance, and chaos engineering.
+- Able to evaluate and recommend emerging technologies, using techniques like technology radar, proof of concept (POC), and experimentation.
+
+## Soft
+- Strong leadership skills, with a focus on creating a shared sense of purpose and vision, and inspiring team members to achieve their goals and find joy in their work.
+- Strong conflict resolution and problem-solving skills, with a focus on resolving conflicts in a constructive and positive manner.
+- Strategic thinking and business acumen, with a focus on customer-centricity, product-market fit, and growth hacking.
+- Collaborative mindset, with experience working cross-functionally using techniques like Scrum, Kanban.
 
 ---
 
@@ -226,3 +229,7 @@ Scade was a tinder-alike dating application that was born in the early 2010-s an
 I was the part of IT team which was responsible for internal tools and instruments. One of my main goals there was creating a ticket system for inventorial requests/tasks. That application was developed on top of Redmine, heavily customized, and extended. Apart from that, many minor projects and applications helped to ease the company's lifecycle. The application was mostly written in python and ruby, using rails and Django.
 
 ---
+
+# Education
+
+1. MEPHI (Moscow Engineering Physics Institute), Natalia Nesterova Moscow Academy. Graduated in 2008 with a master's degree in "Industrial Control Systems" or ASUP as it's called here.
