@@ -1,0 +1,12 @@
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/nukah/hugo-theme-terminal.git
+[submodule "themes/paper"]
+	path = themes/paper
+	url = https://github.com/nanxiaobei/hugo-paper
+[submodule "themes/risotto"]
+	path = themes/risotto
+	url = https://github.com/joeroe/risotto.git
+[submodule "themes/sarah"]
+	path = themes/sarah
+	url = https://github.com/avelino/hugo-theme-sarah.git
