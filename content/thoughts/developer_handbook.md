@@ -271,91 +271,7 @@ components:
 - [OpenAPI Tooling](https://openapi.tools/)
 - [Stoplight API Management system](https://stoplight.io/)
 
-# Logic composition
-
-Code composition can be improved by adopting an approach that involves:
-
-- Using a framework to structure the code
-- Organizing the code into small, single-purpose functions
-- Improving code readability and reducing cognitive load
-- Making the codebase easier to maintain and extend
-- Focusing on building small, focused parts of an application that can be tested in isolation
-- Composing these smaller parts into larger, more complex processes
-- Writing clean, maintainable code that results in higher quality software.
-
-These practices are essential for achieving good code composition, which is crucial for developing software that is efficient, scalable, and easy to maintain.
-
-## Examples
-
-```ruby
-module Orders
-  class UpdateOrder
-    extend LightService::Organizer
-
-    def self.call(params)
-      with(params: params)
-        .reduce(
-          Steps::ValidateInputParams,
-          Steps::FindOrCreateOrder,
-          Steps::UpdateOrderAttributes,
-          Steps::SendSignalToQueue,
-        )
-    end
-  end
-end
-
-module Orders
-  module Steps
-    class ValidateInputParams
-      extend LightService::Action
-
-			expects :params
-			promises :schema
-
-      executed do |context|
-				context.schema = Orders::Schemas::Params.new.call(context.params)
-        context.fail_and_return!("Invalid order params") if context.schema.failure?
-      end
-    end
-
-    class FindOrCreateOrder
-      extend LightService::Action
-
-      executed do |context|
-        # find or create the order here
-        # ...
-        context.order = order
-      end
-    end
-
-    class UpdateOrderAttributes
-      extend LightService::Action
-
-      executed do |context|
-        # update order attributes and validate the model
-        # ...
-        context.fail_and_return!("Invalid order attributes") if invalid
-      end
-    end
-
-    class SendSignalToQueue
-      extend LightService::Action
-
-      executed do |context|
-        # send signal to SQS queue
-        # ...
-      end
-    end
-  end
-end
-```
-
-## Referrals
-
-- [Chain of responsibility pattern](https://refactoring.guru/design-patterns/chain-of-responsibility)
-- [Command pattern](https://refactoring.guru/design-patterns/command)
-
-# Architectural patterns
+# Architectural principles
 
 ## SOLID
 
@@ -644,7 +560,253 @@ This stands for Keep It Simple, Stupid. This principle encourages you to write s
 - [KISS Definition](https://people.apache.org/~fhanik/kiss.html)
 - [DRY Definition](https://www.plutora.com/blog/understanding-the-dry-dont-repeat-yourself-principle)
 - [SOLID Definition](https://www.freecodecamp.org/news/solid-design-principles-in-software-development/)
+
+# Architectural patterns
+
+## Transactional outbox
+
+### What is outbox?
+The Transactional Outbox Pattern is an architectural pattern for ensuring reliable and atomic message delivery in distributed systems. It offers the possibility of decoupling the sending of messages from the transaction limit of the main business process, thus improving system reliability and performance.
+
+The transactional outbox pattern involves capturing messages that need to be sent as part of a transactional operation and storing them in an outbox table within the same database transaction. These messages are then asynchronously processed and sent to external systems using a background process or messaging infrastructure. The outbox acts as a buffer that guarantees the eventual delivery of messages, even if the main transaction fails or is rolled back.
+
+### Constraints of implementing outbox
+To successfully apply the transactional outbox pattern, the following constraints should be met:
+
+- **Atomicity**
+  The messages in the outbox should be stored and processed within the same transaction as the main business operation to maintain atomicity.
+- **Durability**
+  The outbox messages should be persisted reliably to ensure that they are not lost in case of system failures.
+- **Reliability**
+  The background process or messaging infrastructure responsible for processing the outbox messages should guarantee eventual delivery and handle failures gracefully.
+- **Idempotency**
+  The processing of outbox messages should be idempotent to handle potential duplicates or retries without causing unintended side effects.
+
+```ruby
+# OutboxJob model represents a message in the outbox table
+class OutboxJob < ApplicationRecord
+  # Fields: id, payload, destination, metadata, created_at, updated_at
+end
+
+# Service responsible for handling outbox messages
+class OutboxService
+  def self.enqueue(payload, destination, metadata = {})
+    OutboxMessage.create!(payload: payload, destination: destination, metadata: metadata)
+  end
+
+  def self.process_outbox
+    OutboxMessage.transaction do
+      messages = OutboxMessage.lock.where(processed_at: nil).order(:created_at)
+
+      messages.each do |message|
+        send_message(message)
+        message.update!(processed_at: Time.now)
+      end
+    end
+  end
+
+  private
+
+  def self.send_message(message)
+    # Send the message to the destination using an appropriate method
+    # Example: HTTP request, publish to a message queue, etc.
+    puts "Sending message: #{message.payload} to #{message.destination}"
+  end
+end
+
+# Usage example
+class OrderService
+  def create_order(params)
+    Order.transaction do
+      order = Order.create!(params)
+      OutboxService.enqueue(order.to_json, '/orders')
+    end
+  end
+end
+```
+## Async job
+### What is async job?
+The asynchronous job model, also known as asynchronous processing or background jobs, offloads time-intensive or non-blocking tasks for asynchronous processing.
+The system queues these jobs for later processing, rather than performing them synchronously within the request-response cycle.
+This pattern allows the application to respond quickly to user requests and delegate resource-intensive or slow operations to separate worker processes or background job queues.
+### How to use it effectively?
+The async job pattern is particularly useful in scenarios where tasks can be performed asynchronously without affecting the immediate user experience. It is beneficial in the following situations:
+
+- Processing tasks that require significant time or computational resources, such as generating reports, large data imports/exports, image processing, or intensive calculations.
+- Performing tasks that involve external services or APIs, such as sending emails, processing payments, or integrating with third-party systems.
+- Executing tasks that can be deferred or processed in the background, such as data synchronization, notifications, or cache invalidation.
+## Dependency management
+### What is DM?
+
+Managing the relationships and interactions between different components or modules of a system is a critical aspect of software development. It facilitates maintenance, scalability and code reuse by ensuring that these components work together seamlessly.
+
+Dependency injection (DI) is a key technique for managing dependencies. DI is a design pattern that removes the responsibility for creating and managing dependencies from the classes that use them, thus promoting loose coupling and separation of concerns. Instead, the dependency is added to the class from outside the class.
+
+### What does DM bring?
+- **Component decoupling**
+
+    DI helps to decouple components by abstracting their dependencies. This reduces the direct dependencies between classes, making them more modular and independent. As a result, changes to one component are less likely to have ripple effects throughout the system.
+
+- **Simple to test**
+
+    Dependencies can be easily mocked or stubbed out when unit testing with DI. By injecting test doubles such as fakes or mocks into the code being tested, developers isolate the behaviour of individual components and write more robust and reliable tests.
+
+- **Enhance the reusability of code**
+
+    DI allows for greater code reusability. Dependencies can easily be reused in other parts of the system by separating them from the classes that use them. This encourages more modular design and reduces duplicated coding.
+
+- **Agility and maintainability**
+
+    DI enables flexible configuration of dependencies. You can easily replace one implementation with another or introduce a new dependency without changing existing code. This flexibility makes the system easier to adapt to changing requirements and makes maintenance easier.
+
+- **Simplified code architecture**
+
+    By clearly separating concerns, DI helps to keep the codebase cleaner and more readable. With the explicit declaration of dependencies and their injection into classes, the code structure is more transparent and easier to understand. This makes it easier for developers to reason about the code, identify potential problems and make changes or improvements.
+
+```ruby
+# Without DI
+
+class OrderProcessor
+  def process(order)
+    inventory = Inventory.new
+    payment_gateway = PaymentGateway.new
+
+    # ... process the order using inventory and payment_gateway ...
+  end
+end
+
+# Test for OrderProcessor
+describe OrderProcessor do
+  describe '#process' do
+    it 'processes the order correctly' do
+      # Difficult to isolate and mock/stub Inventory and PaymentGateway
+    end
+  end
+end
+
+# With DI
+
+class OrderProcessor
+  def initialize(inventory, payment_gateway)
+    @inventory = inventory
+    @payment_gateway = payment_gateway
+  end
+
+  def process(order)
+    # ... process the order using @inventory and @payment_gateway ...
+  end
+end
+
+# Test for OrderProcessor
+describe OrderProcessor do
+  describe '#process' do
+    it 'processes the order correctly' do
+      inventory = double('Inventory')
+      payment_gateway = double('PaymentGateway')
+
+      # Mock or stub behavior of Inventory and PaymentGateway
+
+      order_processor = OrderProcessor.new(inventory, payment_gateway)
+      expect { order_processor.process(order) }.to ...
+    end
+  end
+end
+```
+
+## Chain of responsibility
+### What is chain of responsibility?
+CoR patterns are behavior-oriented design patterns in which requests are passed through a series of potential handlers until they are handled or reach the end of the series.
+Any agent in the chain can choose to handle the request or hand it off to the next agent.
+This pattern promotes loose coupling and flexibility in the handling of queries, which makes the pattern useful in scenarios with multiple handler choices and dynamic handling needs.
+### What does Organiser bring?
+- **Decoupling**
+  The pattern promotes loose coupling between the sender of the request and the handlers, allowing them to vary independently.
+- **Flexibility**
+  New handlers can be added or existing ones modified without affecting the sender or other handlers in the chain.
+- **Extensibility**
+  The pattern allows for easy extension by adding new handlers to the chain.
+- **Dynamic behavior**
+  The specific handler for a request is determined at runtime, providing flexibility in handling requests based on different conditions.
+- **Single Responsibility**
+  Each handler in the chain focuses on a specific responsibility, making the code more modular and maintainable.
+
+### What are the constraints?
+- **Potential request leakage**
+  If a request reaches the end of the chain without being handled, it may not receive appropriate handling or feedback.
+- **Performance impact**
+  Depending on the length and complexity of the chain, there might be a performance overhead due to iterating through each handler in the chain.
+- **Difficulty in debugging**
+  As the request traverses through multiple handlers, tracking and debugging the flow can be challenging, especially if there are multiple branches or conditional logic involved.
+
+```ruby
+module Orders
+  class UpdateOrder
+    extend LightService::Organizer
+
+    def self.call(params)
+      with(params: params)
+        .reduce(
+          Steps::ValidateInputParams,
+          Steps::FindOrCreateOrder,
+          Steps::UpdateOrderAttributes,
+          Steps::SendSignalToQueue,
+        )
+    end
+  end
+end
+
+module Orders
+  module Steps
+    class ValidateInputParams
+      extend LightService::Action
+
+			expects :params
+			promises :schema
+
+      executed do |context|
+				context.schema = Orders::Schemas::Params.new.call(context.params)
+        context.fail_and_return!("Invalid order params") if context.schema.failure?
+      end
+    end
+
+    class FindOrCreateOrder
+      extend LightService::Action
+
+      executed do |context|
+        # find or create the order here
+        # ...
+        context.order = order
+      end
+    end
+
+    class UpdateOrderAttributes
+      extend LightService::Action
+
+      executed do |context|
+        # update order attributes and validate the model
+        # ...
+        context.fail_and_return!("Invalid order attributes") if invalid
+      end
+    end
+
+    class SendSignalToQueue
+      extend LightService::Action
+
+      executed do |context|
+        # send signal to SQS queue
+        # ...
+      end
+    end
+  end
+end
+```
+## Referrals
+
 - [Architectural Patterns Catalogue](https://refactoring.guru/design-patterns/catalog)
+- [Chain of responsibility pattern](https://refactoring.guru/design-patterns/chain-of-responsibility)
+- [Command pattern](https://refactoring.guru/design-patterns/command)
+- [Outbox pattern](https://microservices.io/patterns/data/transactional-outbox.html)
+- [Async job](https://preparingforcodinginterview.wordpress.com/2019/12/18/design-a-distributed-delayed-job-queueing-system/)
 
 # Framework and libraries
 

@@ -13,6 +13,7 @@ date: 2023-02-13
 - [Event driven architecture patterns 2](https://medium.com/wix-engineering/6-event-driven-architecture-patterns-part-2-455cc73b22e1)
 - [Top architectural characteristics and non-functional requirements](https://blog.devgenius.io/top-10-architecture-characteristics-non-functional-requirements-with-cheatsheat-7ad14bbb0a9b)
 - [Fundamentals of software architect](https://yoan-thirion.gitbook.io/knowledge-base/software-architecture/fundamentals-of-software-architecture)
+- [How to start with architecture design solution](https://www.lucidchart.com/blog/how-to-design-software-architecture)
 
 # org topics
 - [When does staff engineer actually code anything](https://medium.com/staff-engineering-learnings/as-a-staff-engineer-leading-multi-team-projects-when-do-you-code-b37c6ae8ac7c)
@@ -20,6 +21,7 @@ date: 2023-02-13
 - [Agile must end](https://uxdesign.cc/the-age-of-agile-must-end-bc89c0f084b7)
 - [How to build performing team](https://softwareleads.substack.com/p/how-to-build-a-high-performing-software)
 - [How to make your team more resilient](https://www.forbes.com/sites/johnhall/2023/03/05/4-ways-to-make-your-team-more-resilient)
+- [What is Devex](https://queue.acm.org/detail.cfm?id=3595878)
 
 # books
 - [DDD in Go](https://www.amazon.com/Domain-Driven-Design-Golang-maintainable-business-ebook/dp/B0BNJ8KHYN/ref=tmm_kin_swatch_0)
@@ -27,3 +29,4 @@ date: 2023-02-13
 # toolkit
 - [Whimsical / diagrams and wireframing](https://whimsical.com/)
 - [Sequence diagrams](https://gleek.io)
+- [Okso / Mockups](https://okso.app/)
