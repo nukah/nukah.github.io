@@ -828,38 +828,42 @@ end
 
 # Testing
 
-Testing is a vital part of the software development process. It ensures that our code works as intended and catches any bugs or problems before they reach production. Here are some best practices and approaches you should adopt for testing your code:
-
-- **Write tests early and often**
-
+Testing is a vital part of the software development process. It ensures that our code works as intended and catches any bugs or problems before they reach production.
+## Best practices
+### Write tests early and often
 Tests should be written as early as possible in the development process and run frequently to ensure that code changes do not introduce new problems.
-- **Use automated testing**
 
+### Use automated testing
 Automated tests allow you to test quickly and consistently, and are more efficient and reliable than manual tests. This includes unit testing, integration testing and end-to-end testing.
-- **Test for different scenarios**
+### Test for different scenarios
+  Make sure that you test for both the normal and the edge cases, as well as for any error conditions that might occur. This includes testing for invalid input, testing for unexpected behaviour and testing for failure modes.
+### Keep tests isolated
+  Tests should be written to be independent of each other, that is, the result of one test should not affect the result of another. This ensures that tests are reliable and can be run in any order.
 
-Make sure that you test for both the normal and the edge cases, as well as for any error conditions that might occur. This includes testing for invalid input, testing for unexpected behaviour and testing for failure modes.
-- **Keep tests isolated**
+### Use code coverage tools
+  Code coverage tools can help identify under-tested areas of code, enabling more comprehensive testing.
 
-Tests should be written to be independent of each other, that is, the result of one test should not affect the result of another. This ensures that tests are reliable and can be run in any order.
-- **Use code coverage tools**
-
-Code coverage tools can help identify under-tested areas of code, enabling more comprehensive testing.
-
-There are several popular approaches to testing, including
-
-- **Unit testing**
-
-These tests isolate individual code units or components. Unit tests are usually automated and focus on testing the functionality of small pieces of code.
-- **Integration testing**
-
-This is the testing of how different units of code work together as part of a larger system. Integration tests are typically automated. They can be used to identify problems with the interaction between different components.
-- **End-to-end testing**
-
-This is where the entire system is tested as a whole, from the beginning to the end. End-to-end tests are typically automated and can be used to identify problems with overall system functionality.
-
-Proper testing will ensure that the software is reliable, efficient and effective in terms of the user experience.
-
+## Levels of testing
+### Unit Testing
+Boundary: Individual units (methods, functions, or classes).
+Dependencies: External dependencies are mocked or stubbed.
+What should be present: Test cases covering all code paths and edge cases.
+What should not be present: External integrations, dependencies on other units or modules.
+### Integration Testing
+Boundary: Interaction and compatibility between different components/modules.
+Dependencies: Integration points between components, including databases, APIs, etc.
+What should be present: Test scenarios covering component interaction and data consistency.
+What should not be present: In-depth unit-level testing, external factors beyond integration boundaries.
+### System Testing
+Boundary: The entire system or application as a whole.
+Dependencies: Integrated components and external dependencies.
+What should be present: End-to-end test cases, user workflows, input/output validation.
+What should not be present: Detailed unit-level testing, isolated component testing.
+### End-to-End Testing
+Boundary: Testing the entire application workflow.
+Dependencies: All integrated components, external systems, and user interactions.
+What should be present: Test cases covering complete user journeys and system behavior.
+What should not be present: Testing individual components in isolation, unit-level testing.
 ## Referrals
 
 - [How to write good tests](https://leanylabs.com/blog/good-unit-tests/)
@@ -868,11 +872,16 @@ Proper testing will ensure that the software is reliable, efficient and effectiv
 
 Metrics and analysis are crucial for identifying bottlenecks and improving the performance and scalability of Ruby applications. Here are some important points to consider when designing and analyzing metrics:
 
-- Define clear objectives: Before designing metrics, it is important to clearly define the objectives of the application and the specific areas that need to be measured, both technically and in terms of business goals.
-- Measure the right things: To gain meaningful insights, it is important to measure the right things. Metrics should cover key areas of the application, including response times, error rates, and resource usage. It is also important to cover all layers of the application, including the database, application server, and web server.
-- Use a consistent naming convention: To make metrics easier to analyze, it is important to use a consistent naming convention. This will help group related metrics together and make it easier to compare metrics across different parts of the application.
-- Set baselines and benchmarks: To track performance over time, set baselines and benchmarks for key metrics. This will help identify performance trends and spot deviations from expected performance.
-- Use StatsD and Datadog library: From a technical perspective, metrics should be provided through the use of StatsD and the Datadog library. StatsD is a lightweight daemon that collects and aggregates metrics, while Datadog provides a platform for storing, visualizing, and analyzing metrics.
+## Key principles
+### Define clear objectives
+Before designing metrics, it is important to clearly define the objectives of the application and the specific areas that need to be measured, both technically and in terms of business goals.
+### Measure the right things
+To gain meaningful insights, it is important to measure the right things. Metrics should cover key areas of the application, including response times, error rates, and resource usage. It is also important to cover all layers of the application, including the database, application server, and web server.
+### Use a consistent naming convention
+To make metrics easier to analyze, it is important to use a consistent naming convention. This will help group related metrics together and make it easier to compare metrics across different parts of the application.
+
+### Set baselines and benchmarks
+To track performance over time, set baselines and benchmarks for key metrics. This will help identify performance trends and spot deviations from expected performance.
 
 ## Examples
 
