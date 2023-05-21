@@ -2,6 +2,7 @@
 title: "Key design concepts"
 date: 2023-05-13T21:09:14+04:00
 tags: ['engineering', 'system design', 'development']
+draft: true
 ---
 
 # Introduction
