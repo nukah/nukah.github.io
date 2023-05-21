@@ -645,23 +645,23 @@ Dependency injection (DI) is a key technique for managing dependencies. DI is a 
 ### What does DM bring?
 - **Component decoupling**
 
-    DI helps to decouple components by abstracting their dependencies. This reduces the direct dependencies between classes, making them more modular and independent. As a result, changes to one component are less likely to have ripple effects throughout the system.
+DI helps to decouple components by abstracting their dependencies. This reduces the direct dependencies between classes, making them more modular and independent. As a result, changes to one component are less likely to have ripple effects throughout the system.
 
 - **Simple to test**
 
-    Dependencies can be easily mocked or stubbed out when unit testing with DI. By injecting test doubles such as fakes or mocks into the code being tested, developers isolate the behaviour of individual components and write more robust and reliable tests.
+Dependencies can be easily mocked or stubbed out when unit testing with DI. By injecting test doubles such as fakes or mocks into the code being tested, developers isolate the behaviour of individual components and write more robust and reliable tests.
 
 - **Enhance the reusability of code**
 
-    DI allows for greater code reusability. Dependencies can easily be reused in other parts of the system by separating them from the classes that use them. This encourages more modular design and reduces duplicated coding.
+DI allows for greater code reusability. Dependencies can easily be reused in other parts of the system by separating them from the classes that use them. This encourages more modular design and reduces duplicated coding.
 
 - **Agility and maintainability**
 
-    DI enables flexible configuration of dependencies. You can easily replace one implementation with another or introduce a new dependency without changing existing code. This flexibility makes the system easier to adapt to changing requirements and makes maintenance easier.
+DI enables flexible configuration of dependencies. You can easily replace one implementation with another or introduce a new dependency without changing existing code. This flexibility makes the system easier to adapt to changing requirements and makes maintenance easier.
 
 - **Simplified code architecture**
 
-    By clearly separating concerns, DI helps to keep the codebase cleaner and more readable. With the explicit declaration of dependencies and their injection into classes, the code structure is more transparent and easier to understand. This makes it easier for developers to reason about the code, identify potential problems and make changes or improvements.
+By clearly separating concerns, DI helps to keep the codebase cleaner and more readable. With the explicit declaration of dependencies and their injection into classes, the code structure is more transparent and easier to understand. This makes it easier for developers to reason about the code, identify potential problems and make changes or improvements.
 
 ```ruby
 # Without DI
