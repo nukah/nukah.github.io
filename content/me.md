@@ -59,22 +59,31 @@ The excitement of technology, the potential to contribute to something greater, 
 
 **company:** Fairmoney ([fairmoney.io](https://fairmoney.io/))
 
-**position**: Engineering manager
+**position**: Senior Engineering manager
 
 **Summary**
+Fairmoney, a French-based FINTECH company, is actively expanding in emerging markets, particularly in India and Nigeria. The firm specializes in developing innovative financial products and services.
 
-Fairmoney is french based company creating financial products in emerging markets.
+**Technical Experience**
 
-**Technical**
+Product division I
 
-1. Development and management of one of the product streams with a focus on accelerating client financial stability.
-2. Provide feedback to business units on delivery expectations in relation to new initiatives.
-3. Management of a full feature development team delivering value in the product stream.
-4. Plan, design and retro-analyse the outcome of feature implementations in conjunction with the Business Development department.
-5. Analysing and designing the technical domain of the team.
-6. Maintain high standards of SDLC, development practices and infrastructure.
-7. Facilitation of the migration to the distributed approach in terms of systems and services.
-8. Analyse and work with my colleagues to improve the overall knowledge and skills of the team.
+- Led the conceptualization and development of a new savings product, aligning with market needs and regulatory standards.
+- Worked in collaboration with marketing and business teams for product launch and promotion.
+- Managed technical performance, security, and user engagement aspects of the product.
+- Product managed to successfully attract growth, amounting to hundreds millions of nairas within six months.
+
+Product division II
+
+- Transitioned to a leadership role in the loan product division, overseeing strategic project management and aligning initiatives with business objectives.
+- Developed an advanced loan collection system, efficiently handling over 2 million loans daily, demonstrating scalability and operational stability.
+- Launched a new lending funnel platform within a challenging eight-month period, effectively processing 30,000 loans on a new mobile platform in less than six months.
+- Implemented an upgraded, flexible version of the collection engine for the new platform, enhancing performance and adaptability.
+- Provided critical feedback and strategic guidance to business divisions, influencing new initiatives and enhancing delivery outcomes.
+- Involved in technical analysis and design within the team, ensuring the delivery of innovative and robust solutions.
+- Upheld high standards in SDLC, development practices, and infrastructure.
+- Championed the shift towards a distributed systems approach, improving operational efficiency and service delivery.
+- Fostered a culture of continuous learning and improvement, enhancing team skills and encouraging knowledge sharing.
 
 ---
 
