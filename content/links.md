@@ -22,6 +22,8 @@ date: 2023-02-13
 - [How to build performing team](https://softwareleads.substack.com/p/how-to-build-a-high-performing-software)
 - [How to make your team more resilient](https://www.forbes.com/sites/johnhall/2023/03/05/4-ways-to-make-your-team-more-resilient)
 - [What is Devex](https://queue.acm.org/detail.cfm?id=3595878)
+- [EM courated fundamentals](https://github.com/engineering-management/awesome-engineering-management?tab=readme-ov-file)
+- [Essential soft-skills](https://hybridhacker.email/p/essential-soft-skills-for-engineers-and-managers)
 
 # books
 - [DDD in Go](https://www.amazon.com/Domain-Driven-Design-Golang-maintainable-business-ebook/dp/B0BNJ8KHYN/ref=tmm_kin_swatch_0)
